@@ -1,0 +1,644 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    background: #111111;
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    padding-bottom: 95px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: #111;
+
+    padding: 8px 16px;
+
+    border-radius: 18px;
+
+    margin: 16px 0;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo img {
+
+    height: 60px;
+
+    width: auto;
+}
+
+
+/* =========================
+   HEADER RIGHT
+========================= */
+
+.header-right {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+/* =========================
+   MENU BUTTON
+========================= */
+
+.icon-btn {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 50%;
+
+    background: #1c1c1c;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+
+.icon-btn:hover {
+
+    background: #7a3cff;
+}
+
+
+/* =========================
+   TRAKTIR PAGE
+========================= */
+
+.traktir-page {
+
+    padding: 0 16px;
+
+    min-height: 500px;
+}
+
+
+/* ==========================
+   BOTTOM NAVIGATION
+========================== */
+
+.bottom-nav {
+
+    position: fixed;
+
+    left: 15px;
+
+    right: 15px;
+
+    bottom: 5px;
+
+    height: 70px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    background: #181818;
+
+    border: 1px solid
+        rgba(168, 85, 247, .45);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 15px
+        rgba(168, 85, 247, .20);
+
+    z-index: 9999;
+}
+
+
+/* ==========================
+   NAV ITEM
+========================== */
+
+.nav-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: #cfcfcf;
+
+    width: 100%;
+
+    transition: .3s;
+
+    position: relative;
+}
+
+
+/* ==========================
+   NAV ICON
+========================== */
+
+.nav-item i {
+
+    font-size: 24px;
+
+    margin-bottom: 3px;
+}
+
+
+/* ==========================
+   NAV TEXT
+========================== */
+
+.nav-item span {
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================
+   ACTIVE
+========================== */
+
+.nav-item.active {
+
+    color: #b84cff;
+}
+
+
+/* ==========================
+   ACTIVE LINE
+========================== */
+
+.nav-item.active::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -7px;
+
+    width: 30px;
+
+    height: 4px;
+
+    background: #b84cff;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 0 8px #b84cff;
+}
+
+
+/* ==========================
+   TAP EFFECT
+========================== */
+
+.nav-item:active {
+
+    transform: scale(.92);
+}
+
+/* =========================
+   SUPPORT / TRAKTIR
+========================= */
+
+.support-section {
+    padding: 0 0px 20px;
+    margin-top: -15px;
+}
+
+.support-title {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1;
+    font-weight: 800;
+    color: #b84cff;
+}
+
+.support-text {
+    margin: 3px 0 0;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #dddddd;
+    
+    font-weight: 700;
+}
+
+/* =========================
+   GAMBAR TRAKTIR
+========================= */
+
+.support-character {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-top: -20px;
+}
+
+.support-character img {
+    width: 175px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+}
+
+.traktir-image {
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto 0;
+
+    mix-blend-mode: lighten;
+}
+
+/* GERAKAN GAMBAR KARAKTER */
+.support-character img {
+    animation: karakterMantul 4s ease-in-out infinite;
+}
+
+@keyframes karakterMantul {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* =========================
+   AJAKAN SUPPORT
+========================== */
+
+.support-message {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.support-message-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.support-message-text {
+  margin: 5px auto 0;
+  font-size: 17px;
+  line-height: 1.1;
+  max-width: 500px;
+  font-weight: 700;
+  
+  font-style: italic;
+}
+
+/* =========================
+   TOMBOL DUKUNGAN
+========================= */
+
+.support-buttons {
+    width: 100%;
+    max-width: 620px;
+    margin: 28px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.support-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 82px;
+
+    margin-bottom: 16px;
+    padding: 12px 18px;
+
+    box-sizing: border-box;
+    text-decoration: none;
+
+    border-radius: 22px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ICON */
+
+.support-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+}
+
+.support-icon i {
+    font-size: 30px;
+}
+
+
+/* TEKS */
+
+.support-button-text {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 16px;
+    flex: 1;
+}
+
+.support-button-text strong {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.support-button-text span {
+    margin-top: 5px;
+
+    font-size: 15px;
+    line-height: 1.3;
+
+    opacity: 0.8;
+}
+
+
+/* PANAH */
+
+.support-arrow {
+    font-size: 34px;
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TOMBOL DUKUNG NEKOVAULT
+========================= */
+
+.support-donate {
+    background: linear-gradient(
+        135deg,
+        #9b1745,
+        #c72b58
+    );
+
+    border: 1px solid rgba(255, 80, 140, 0.5);
+
+    box-shadow:
+        0 0 15px rgba(220, 40, 120, 0.25);
+}
+
+.support-donate .support-icon {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.support-donate .support-icon i {
+    color: white;
+}
+
+.support-donate .support-arrow {
+    color: white;
+}
+
+
+/* =========================
+   TOMBOL DISCORD
+========================= */
+
+.support-discord {
+    background: linear-gradient(
+        135deg,
+        #172d54,
+        #5865f2
+    );
+
+    border: 1px solid rgba(110, 130, 255, 0.5);
+
+    box-shadow:
+        0 0 15px rgba(88, 101, 242, 0.25);
+}
+
+.support-discord .support-icon {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.support-discord .support-icon i {
+    color: white;
+}
+
+.support-discord .support-arrow {
+    color: white;
+}
+
+
+/* =========================
+   EFEK SAAT DITEKAN
+========================= */
+
+.support-button:active {
+    transform: scale(0.97);
+}
+
+/* =========================
+   FINISHING TOMBOL DUKUNGAN
+========================= */
+
+.support-buttons {
+    margin-top: 10px;
+    padding: 0 18px;
+}
+
+
+/* UKURAN TOMBOL */
+
+.support-button {
+    min-height: 72px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+
+    border-radius: 20px;
+
+    /* supaya link tidak berubah warna */
+    color: white !important;
+}
+
+/* ICON */
+
+.support-icon {
+    width: 52px;
+    height: 52px;
+}
+
+.support-icon i {
+    font-size: 27px;
+    color: white !important;
+}
+
+
+/* BAGIAN TEKS */
+
+.support-button-text {
+    margin-left: 14px;
+}
+
+.support-button-text strong {
+    font-size: 18px;
+    line-height: 1.2;
+
+    color: white !important;
+}
+
+.support-button-text span {
+    margin-top: 4px;
+
+    font-size: 13px;
+    line-height: 1.25;
+
+    color: rgba(255, 255, 255, 0.82) !important;
+}
+
+
+/* PANAH */
+
+.support-arrow {
+    font-size: 30px;
+    color: white !important;
+}
+
+/* =========================
+   SHINE EFFECT TOMBOL
+========================= */
+
+.support-button {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cahaya yang bergerak */
+.support-button::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -80%;
+
+    width: 45%;
+    height: 100%;
+
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    animation: supportShine 5s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+@keyframes supportShine {
+    0% {
+        left: -80%;
+    }
+
+    45% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
+}
+
+.support-thanks {
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.support-thanks p {
+    margin: -5px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.support-thanks span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #bdbdbd;
+    font-weight: 500;
+    font-style: italic;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+<header class="game-header">
+
+    <a href="index.html" class="back-btn">&times;</a>
+
+    <img id="gameCover" class="game-cover">
+
+    <div class="cover-overlay"></div>
+
+</header>
+     
+     <div class="game-info">
+
+       <h1 id="gameTitle"></h1>
+       
+       <p class="game-developer">
+         by <span id="gameDeveloper"></span>
+       </p>
+       
+       <div id="platformBadges" class="platform-badges"></div>
+       
+      <div class="game-details">
+
+       <div class="detail-item">
+         <span>VERSION</span>
+         <p id="gameVersion"></p>
+       </div>
+
+       <div class="detail-item">
+         <span>ENGINE</span>
+         <p id="gameEngine"></p>
+       </div>
+
+       <div class="detail-item">
+         <span>RELEASED</span>
+         <p id="gameReleased"></p>
+       </div>
+
+       <div class="detail-item">
+         <span>UPDATED</span>
+         <p id="gameUpdated"></p>
+       </div>
+
+       <div class="detail-item">
+         <span>LANGUAGE</span>
+         <div id="gameLanguage"></div>
+       </div>
+
+      </div>
+      
+      <div class="genre-section">
+
+       <h3 class="genre-title">
+        🏷️ GENRE <span id="genreCount"></span>
+       </h3>
+
+       <div class="genre-line"></div>
+
+       <div id="genreBadges" class="genre-badges"></div>
+
+      </div>
+      
+      <div class="synopsis-section">
+
+       <div class="synopsis-title">
+          📝 SINOPSIS
+       </div>
+
+       <div id="gameSynopsis" class="synopsis-text"></div>
+
+       <button id="showMoreBtn" class="show-more-btn">
+          Selengkapnya...
+       </button>
+
+      </div>
+      
+      <div class="preview-section">
+
+       <h3 class="preview-title">
+         🖼️ PREVIEW
+       </h3>
+
+       <div class="preview-line"></div>
+
+       <div id="previewSlider" class="preview-slider"></div>
+
+      </div>
+      
+      <div class="download-section">
+
+       <h2>⬇️ DOWNLOAD</h2>
+
+       <div class="download-platform">
+         Android / Windows
+       </div>
+       
+       <div class="download-size" id="gameSize"></div>
+
+      </div>
+      
+      <div class="download-buttons">
+    <button class="download-btn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v12"></path>
+            <path d="M7 10l5 5 5-5"></path>
+            <path d="M5 21h14"></path>
+        </svg>
+         VIP/Berbayar
+    </button>
+
+    <button class="download-btn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v12"></path>
+            <path d="M7 10l5 5 5-5"></path>
+            <path d="M5 21h14"></path>
+        </svg>
+         Free/Gratis
+    </button>
+</div>
+
+      <footer class="site-footer">
+
+    <div class="footer-logo">
+        <img src="assets/logo/logo.png" alt="NekoVault">
+    </div>
+
+    <div class="footer-columns">
+
+        <div class="footer-column">
+            <h3>PLATFORMS</h3>
+            <p>Windows</p>
+            <p>Android</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>ENGINES</h3>
+            <p>Ren'Py</p>
+            <p>Unity</p>
+            <p>RPGM</p>
+        </div>
+
+    </div>
+
+</footer>
+
+     </div>
+
+<script src="game-page.js"></script>
+
+</body>
+</html>

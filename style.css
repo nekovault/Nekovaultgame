@@ -1,0 +1,1422 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#111111;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 95px;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 85px;
+
+    z-index: 1000;
+
+    background: #111;
+
+    padding: 0 20px;
+
+    border-radius: 0 0 18px 18px;
+
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+.logo img{
+
+    height:60px;
+    width:auto;
+
+}
+
+/* Jarak untuk konten di bawah header */
+
+body {
+    padding-top: 90px;
+}
+
+/* =========================
+   HEADER MENU BUTTON
+========================= */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* TOMBOL GARIS 3 */
+
+.icon-btn {
+
+    width: 42px;
+    height: 42px;
+    
+    padding: 0;
+
+    border: 2px solid #a855f7;
+    outline: none;
+
+    border-radius: 10px;
+
+    background: #111118;
+
+    color: #a855f7;
+
+    font-size: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+    box-shadow:
+        0 0 10px rgba(168,85,247,0.15);
+
+}
+
+/* =========================
+   HAMBURGER → X
+========================= */
+
+.menu-icon {
+
+    width: 22px;
+    height: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    position: relative;
+
+}
+
+
+.menu-icon span {
+
+    width: 100%;
+    height: 2px;
+
+    background: #a855f7;
+
+    border-radius: 2px;
+
+    position: absolute;
+    left: 0;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.25s ease,
+        top 0.35s ease;
+
+}
+
+
+/* POSISI AWAL */
+
+.menu-icon span:nth-child(1) {
+    top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+    top: 8px;
+}
+
+.menu-icon span:nth-child(3) {
+    top: 16px;
+}
+
+
+/* =========================
+   SAAT AKTIF → X
+========================= */
+
+.icon-btn.active .menu-icon span:nth-child(1) {
+
+    top: 8px;
+
+    transform: rotate(45deg);
+
+}
+
+
+.icon-btn.active .menu-icon span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+
+.icon-btn.active .menu-icon span:nth-child(3) {
+
+    top: 8px;
+
+    transform: rotate(-45deg);
+
+}
+
+.header-right .menu-close {
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 2px solid #a855f7;
+    border-radius: 10px;
+
+    background: #15131a;
+
+    color: #b45cff;
+
+    font-size: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+.icon-btn:hover {
+
+    background: rgba(168,85,247,0.12);
+
+    border-color: #b866ff;
+
+    color: #b866ff;
+
+    box-shadow:
+        0 0 15px rgba(168,85,247,0.35);
+
+}
+
+/* =========================
+   MENU PANEL
+========================= */
+
+.menu-panel {
+
+    position: fixed;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+    max-width: 420px;
+
+    height: calc(100vh - 108px);
+
+    background: #111;
+
+    z-index: 900;
+
+    padding: 20px 28px;
+
+    box-sizing: border-box;
+
+    transform: translateX(100%);
+
+    transition: transform 0.3s ease;
+
+    overflow-y: auto;
+}
+
+/* PANEL AKTIF */
+
+.menu-panel.active {
+
+    transform: translateX(0);
+
+}
+
+/* =========================
+   TOMBOL CLOSE
+========================= */
+
+.menu-close {
+
+    display: block;
+
+    margin-left: auto;
+
+    width: 45px;
+    height: 45px;
+
+    border: 2px solid #9d4edd;
+
+    border-radius: 10px;
+
+    background: #15131a;
+
+    color: #b45cff;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: .25s;
+    transform: translateY(20px);
+
+}
+
+
+/* HOVER CLOSE */
+
+.menu-close:hover {
+
+    background: #9d4edd;
+
+    color: white;
+
+    box-shadow: 0 0 15px #9d4edd;
+
+}
+
+
+.menu-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding: 0 16px;
+
+    height: 58px;
+
+    background: #15131a;
+
+    border: 1px solid #30263b;
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+    transition: .25s;
+}
+
+/* SEARCH AKTIF */
+
+.menu-search:focus-within {
+
+    border-color: #a855f7;
+
+    box-shadow: 0 0 12px rgba(168, 85, 247, .35);
+
+}
+
+
+.menu-search i {
+
+    color: #b45cff;
+
+    font-size: 24px;
+
+}
+
+
+.menu-search input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 18px;
+
+}
+
+
+.menu-search input::placeholder {
+
+    color: #8f8999;
+
+}
+
+
+/* =========================
+   MENU ITEM
+========================= */
+
+.menu-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid #29232f;
+
+    color: #b8b0c2;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.menu-item i {
+
+    font-size: 24px;
+
+}
+
+
+/* =========================
+   MENU LINKS
+========================= */
+
+.menu-links {
+
+    padding-top: 8px;
+
+}
+
+
+.menu-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 20px 0;
+
+    color: #b8b0c2;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.menu-link i {
+
+    font-size: 22px;
+
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.menu-item:hover,
+.menu-link:hover {
+
+    color: #b45cff;
+
+}
+
+
+/* =========================
+   ICON MENU
+========================= */
+
+.menu-item:hover i,
+.menu-link:hover i {
+
+    color: #b45cff;
+
+}
+
+/* =========================
+   BANNER
+========================= */
+
+.banner-section{
+
+    margin:16px;
+    position: relative;
+
+}
+
+/* BACKGROUND BLUR BANNER */
+.banner-bg {
+    position: absolute;
+
+    top: -25px;
+    left: -25px;
+
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+
+    background: #2a2a2a;
+
+    filter: blur(6px);
+
+    opacity: 0.5;
+
+    z-index: 0;
+
+    border-radius: 30px;
+}
+
+.banner-slider{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+    transform: scale(1.0);
+
+    background:#2a2a2a;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    position:relative;
+    z-index: 1;
+    
+    display:flex;
+
+}
+
+.banner-item{
+    min-width:100%;
+    width:100%;
+    height:100%;
+
+    flex:0 0 100%;
+    
+    position: relative;
+    
+    transition: transform 0.6s ease-in-out;
+}
+
+.banner-item.active{
+
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+.banner-item img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* INFO DI DALAM BANNER */
+
+.banner-info {
+    position: absolute;
+    left: 20px;
+    right: -20px;
+    bottom: 7px;
+    z-index: 2;
+}
+
+.banner-info h2 {
+    margin: 0 0 12px;
+
+    font-size: 20px;
+    font-weight: 900;
+
+    color: #fff;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,0.9);
+}
+
+.banner-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.banner-engine,
+.banner-status {
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: rgba(10, 5, 25, 0.75);
+}
+
+/* Ren'Py */
+.banner-engine {
+    color: #3b9df5;
+
+    border: 1px solid #3b9df5;
+
+    box-shadow:
+        0 0 6px rgba(155, 92, 255, 0.35);
+}
+
+/* RPG Maker */
+.banner-engine.rpgmaker {
+    color: #ff9d00;
+
+    border: 1px solid #ff9d00;
+
+    box-shadow:
+        0 0 6px rgba(255, 157, 0, 0.35);
+}
+
+/* Unity */
+.banner-engine.unity {
+    color: #b56cff;
+
+    border: 1px solid #b56cff;
+
+    box-shadow:
+        0 0 6px rgba(181, 108, 255, 0.35);
+}
+
+/* STATUS BANNER */
+.banner-status {
+    color: #4ade80;
+    border: 1px solid #22c55e;
+
+    box-shadow:
+        0 0 6px rgba(34, 197, 94, 0.35);
+}
+
+/* COMPLETE */
+.banner-status.complete {
+    color: #f87171;
+
+    border: 1px solid #ef4444;
+
+    box-shadow:
+        0 0 6px rgba(239, 68, 68, 0.35);
+}
+
+.banner-dot {
+    color: #fff;
+    font-weight: 700;
+}
+
+.banner-item::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 80%;
+
+    background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.70),
+    rgba(0, 0, 0, 0.10),
+    transparent
+);
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* =========================
+   SLIDER DOTS
+========================= */
+
+.banner-dots{
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    margin-top:10px;
+}
+
+.banner-dots span{
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+    background:#555;
+
+    transition:.3s;
+    z-index: 2;
+}
+
+.banner-dots span.active{
+    width:18px;
+    border-radius:20px;
+
+    background:#b04cff;
+
+    box-shadow:0 0 8px rgba(176,76,255,.5);
+}
+
+/* SECTION TITLE */
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 10px 16px 0;
+}
+
+.section-title h2 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.section-title a {
+    white-space: nowrap;
+
+    font-size: 14px;
+    color: #b84cff;
+    text-decoration: none;
+}
+
+/* PENGUMUMAN */
+
+.announcement-title {
+    margin: 30px 0 5px 0;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    color: white;
+}
+
+.announcement{
+
+    padding: 0 16px;
+    z-index: 1;
+
+}
+
+.announcement-box{
+
+    background:#1d1d1d;
+
+    border-radius:16px;
+
+    padding:7px 16px;
+
+}
+
+.announcement-box p{
+
+    font-size:15px;
+
+    line-height:1.2;
+
+    color:#d8d8d8;
+    z-index: 1;
+
+}
+
+/* =========================
+   GAME GRID
+========================= */
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* =========================
+   GAME CARD
+========================= */
+
+.game-card {
+    display: block;
+
+    width: 100%;
+
+    text-decoration: none;
+    color: white;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    position: relative;
+
+    border: 1px solid #a855f7;
+
+    box-shadow:
+    0 0 15px rgba(168,85,247,0.5);
+}
+
+/* =========================
+   IMAGE CONTAINER
+========================= */
+
+.card-image {
+    width: 100%;
+
+    aspect-ratio: 9 / 16;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   BLACK GRADIENT
+========================= */
+
+.card-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 55%;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.99),
+            rgba(0,0,0,0)
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   TOP LABELS
+========================= */
+
+.card-top {
+
+    position: absolute;
+
+    top: 8px;
+    left: 6px;
+    right: 6px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    z-index: 5;
+}
+
+/* =========================
+   STATUS GAME
+========================= */
+
+.card-language {
+
+    background: rgba(0, 35, 15, 0.65);
+
+    color: #4ade80;
+
+    border: 1px solid #22c55e;
+
+    font-size: 8px;
+    font-weight: bold;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    white-space: nowrap;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow:
+        0 0 6px rgba(34, 197, 94, 0.25);
+}
+
+
+/* =========================
+   COMPLETE
+========================= */
+
+.card-language.complete {
+
+    background: rgba(70, 0, 0, 0.65);
+
+    color: #f87171;
+
+    border: 1px solid #ef4444;
+
+    box-shadow:
+        0 0 6px rgba(239, 68, 68, 0.25);
+}
+
+/* =========================
+   ABANDONED
+========================= */
+
+.card-language.abandoned {
+
+    background: rgba(70, 45, 0, 0.65);
+
+    color: #fbbf24;
+
+    border: 1px solid #f59e0b;
+
+    box-shadow:
+        0 0 6px rgba(245, 158, 11, 0.25);
+}
+
+/* =========================
+   EFEK SHINE
+========================= */
+
+.card-language::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 40%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    transform: skewX(-20deg);
+
+    animation: cardStatusShine 2s infinite;
+}
+
+
+@keyframes cardStatusShine {
+
+    100% {
+        left: 150%;
+    }
+
+}
+
+/* =========================
+   STATUS KANAN — NEW / UPDATE
+========================= */
+
+.card-status {
+
+    background: linear-gradient(
+        135deg,
+        #ffd700,
+        #ffae00
+    );
+
+    color: black;
+
+    font-size: 8px;
+    font-weight: bold;
+
+    padding: 4px 6px;
+
+    border-radius: 20px;
+
+    white-space: nowrap;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================
+   SHINE EFFECT
+========================= */
+
+.card-language::before,
+.card-status::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 40%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    transform: skewX(-20deg);
+
+    animation: cardStatusShine 2s infinite;
+}
+
+
+@keyframes cardStatusShine {
+
+    100% {
+        left: 150%;
+    }
+
+}
+
+/* =========================
+   BOTTOM CONTENT
+========================= */
+
+.card-bottom {
+
+    position: absolute;
+
+    left: 6px;
+    right: 6px;
+    bottom: 7px;
+
+    z-index: 5;
+
+    text-align: center;
+}
+
+
+/* TITLE */
+
+.card-title {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================
+   PLATFORM
+========================= */
+
+.card-platforms {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+}
+
+
+.card-platform {
+
+    color: #c084fc;
+
+    border: 1px solid #a855f7;
+
+    background: rgba(168,85,247,0.12);
+
+    padding: 3px 6px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+
+    white-space: nowrap;
+}
+
+/* ==========================
+   BOTTOM NAVIGATION
+========================== */
+
+.bottom-nav{
+
+    position:fixed;
+
+    left:15px;
+    right:15px;
+    bottom:5px;
+
+    height:70px;
+
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+    background:#181818;
+
+    border:1px solid rgba(168,85,247,.45);
+
+    border-radius:20px;
+
+    box-shadow:
+        0 0 15px rgba(168,85,247,.20);
+
+    z-index:9999;
+
+}
+
+/* ITEM */
+
+.nav-item{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:#cfcfcf;
+
+    width:100%;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+/* ICON */
+.nav-item i{
+    font-size:24px;
+
+    width:30px;
+    height:30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:3px;
+}
+
+/* TEXT */
+
+.nav-item span{
+
+    font-size:11px;
+
+    font-weight:600;
+
+}
+
+/* ACTIVE */
+
+.nav-item.active{
+
+    color:#b84cff;
+
+}
+
+/* GARIS AKTIF */
+
+.nav-item.active::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-7px;
+
+    width:30px;
+    height:4px;
+
+    background:#b84cff;
+
+    border-radius:30px;
+
+    box-shadow:
+        0 0 8px #b84cff;
+
+}
+
+/* EFEK TAP */
+
+.nav-item:active{
+
+    transform:scale(.92);
+
+}
+
+/* =========================
+   CATALOG
+========================= */
+
+.catalog-sort {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0 15px 10px;
+}
+
+.catalog-title {
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.sort-label {
+
+    color: #7d8aa5;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sort-btn {
+
+    background: #111722;
+
+    color: #7d8aa5;
+
+    border: 1px solid #242d3d;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+.sort-btn.active {
+
+    color: #00bfff;
+
+    border-color: #00bfff;
+
+    background: rgba(0,191,255,0.08);
+
+    box-shadow:
+        0 0 8px rgba(0,191,255,0.15);
+}
+
+
+/* INFO */
+
+.catalog-info {
+
+    display: flex;
+
+    align-items: center;
+    gap: 8px;
+
+    margin: 0 16px 22px;
+
+    color: #7d8aa5;
+
+    font-size: 14px;
+}
+
+.filter-btn {
+
+    color: #00bfff;
+
+    border: 1px solid rgba(0,191,255,0.35);
+
+    background: rgba(0,191,255,0.06);
+
+    padding: 5px 10px;
+
+    border-radius: 18px;
+}
+
+
+/* GRID CATALOG */
+
+.catalog-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 5px;
+
+    margin: 0 15px;
+}
+
+/* =========================
+   FILTER PANEL
+========================= */
+
+.filter-panel {
+
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    margin: 0 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        margin-top 0.35s ease;
+}
+
+
+/* =========================
+   FILTER TERBUKA
+========================= */
+
+.filter-panel.active {
+
+    max-height: 280px;
+
+    opacity: 1;
+
+    margin-top: 12px;
+    margin-bottom: 14px;
+}
+
+
+/* =========================
+   TOMBOL FILTER
+========================= */
+
+.filter-panel button {
+
+    width: 100%;
+
+    padding: 11px 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(168, 85, 247, 0.55);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(38, 20, 65, 0.95),
+            rgba(25, 15, 45, 0.95)
+        );
+
+    color: #d8b4fe;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px rgba(168, 85, 247, 0.12);
+
+    transition: 0.2s ease;
+}
+
+
+.filter-panel button:hover {
+
+    border-color: #a855f7;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(60, 25, 95, 0.95),
+            rgba(35, 20, 60, 0.95)
+        );
+
+    color: #e9d5ff;
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.35);
+}
+
+
+.filter-panel button:active {
+
+    transform: scale(0.98);
+
+}

@@ -1,0 +1,667 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    background: #111111;
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    padding-bottom: 95px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: #111;
+
+    padding: 8px 16px;
+
+    border-radius: 18px;
+
+    margin: 16px 0;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo img {
+
+    height: 60px;
+
+    width: auto;
+}
+
+
+/* =========================
+   HEADER RIGHT
+========================= */
+
+.header-right {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+/* =========================
+   MENU BUTTON
+========================= */
+
+.icon-btn {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 50%;
+
+    background: #1c1c1c;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+
+.icon-btn:hover {
+
+    background: #7a3cff;
+}
+
+
+/* =========================
+   TRAKTIR PAGE
+========================= */
+
+.traktir-page {
+
+    padding: 0 16px;
+
+    min-height: 500px;
+}
+
+
+/* ==========================
+   BOTTOM NAVIGATION
+========================== */
+
+.bottom-nav {
+
+    position: fixed;
+
+    left: 15px;
+
+    right: 15px;
+
+    bottom: 5px;
+
+    height: 70px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    background: #181818;
+
+    border: 1px solid
+        rgba(168, 85, 247, .45);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 15px
+        rgba(168, 85, 247, .20);
+
+    z-index: 9999;
+}
+
+
+/* ==========================
+   NAV ITEM
+========================== */
+
+.nav-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: #cfcfcf;
+
+    width: 100%;
+
+    transition: .3s;
+
+    position: relative;
+}
+
+
+/* ==========================
+   NAV ICON
+========================== */
+
+.nav-item i {
+
+    font-size: 24px;
+
+    margin-bottom: 3px;
+}
+
+
+/* ==========================
+   NAV TEXT
+========================== */
+
+.nav-item span {
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================
+   ACTIVE
+========================== */
+
+.nav-item.active {
+
+    color: #b84cff;
+}
+
+
+/* ==========================
+   ACTIVE LINE
+========================== */
+
+.nav-item.active::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -7px;
+
+    width: 30px;
+
+    height: 4px;
+
+    background: #b84cff;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 0 8px #b84cff;
+}
+
+
+/* ==========================
+   TAP EFFECT
+========================== */
+
+.nav-item:active {
+
+    transform: scale(.92);
+}
+
+/* =========================
+   JUDUL PANDUAN
+========================= */
+
+.guide-section {
+    text-align: center;
+
+    margin-top: -18px;
+    padding: 0 20px;
+}
+
+.guide-title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    line-height: 1.25;
+}
+
+.guide-text {
+    margin-top: -1px;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    text-align: center;
+    color: #cccccc;
+}
+
+.guide-description {
+    margin: 18px auto 0;
+
+    max-width: 500px;
+
+    color: #bdbdbd;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   GUIDE ACCORDION
+========================= */
+
+.guide-item {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* HEADER TOMBOL */
+
+.guide-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5px 18px;
+
+    border: 1px solid rgba(168, 85, 247, 0.5);
+    border-radius: 18px;
+
+    background: #15121a;
+    color: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    gap: 14px;
+}
+
+/* ICON */
+
+.guide-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: rgba(168, 85, 247, 0.18);
+
+    color: #b45cff;
+
+    font-size: 24px;
+}
+
+/* TEKS */
+
+.guide-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-content strong {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+
+    margin-bottom: 3px;
+}
+
+.guide-content span {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+    font-style: italic;
+
+    color: #aaaaaa;
+}
+
+/* PANAH */
+
+.guide-arrow {
+    flex-shrink: 0;
+
+    font-size: 28px;
+
+    color: #b45cff;
+
+    transition: transform 0.25s ease;
+}
+
+/* ISI PANDUAN */
+
+.guide-detail {
+    display: block;
+
+    max-height: 0;
+    overflow: hidden;
+
+    padding: 0 20px;
+
+    opacity: 0;
+
+    margin-top: -2px;
+
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-top: none;
+
+    border-radius: 0 0 18px 18px;
+
+    background: #100e14;
+
+    color: #cccccc;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        padding 0.35s ease;
+}
+
+/* SAAT TERBUKA */
+
+.guide-item.open .guide-header {
+    border-radius: 18px 18px 0 0;
+}
+
+.guide-item.open .guide-detail {
+    display: block;
+}
+
+.guide-item.open .guide-arrow {
+    transform: rotate(90deg);
+}
+
+/* =========================
+   EFEK SAAT TOMBOL DITEKAN
+========================= */
+
+.guide-header {
+    transition: transform 0.15s ease;
+}
+
+.guide-header:active {
+    transform: scale(0.97);
+}
+
+/* =========================
+   ANIMASI TIRAI
+========================= */
+
+.guide-detail {
+    display: block;
+
+    max-height: 0;
+    overflow: hidden;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    opacity: 0;
+    text-align: left;
+    font-weight: 600;
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        padding 0.35s ease;
+}
+
+
+/* =========================
+   TIRAI SAAT TERBUKA
+========================= */
+
+.guide-item.open .guide-detail {
+    max-height: 1500px;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    opacity: 1;
+}
+
+.guide-button-text {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-button-text strong {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 3px;
+}
+
+.guide-button-text span {
+    font-size: 15px;
+    line-height: 1.1;
+    font-weight: 600;
+    font-style: italic;
+    color: #aaaaaa;
+}
+
+/* =========================
+   SOSIAL MEDIA ADMIN
+========================= */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 4px 0;
+}
+
+
+/* TOMBOL SOSIAL MEDIA */
+
+.social-link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px 12px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+
+/* EFEK SAAT DITEKAN */
+
+.social-link:active {
+    transform: scale(0.90);
+    filter: brightness(1.25);
+}
+
+
+/* ICON */
+
+.social-link i {
+    font-size: 19px;
+}
+
+/* =========================
+   YOUTUBE
+========================= */
+
+.social-link.youtube {
+    color: #ffffff;
+    background: #ff0000;
+}
+
+
+/* =========================
+   FACEBOOK
+========================= */
+
+.social-link.facebook {
+    color: #ffffff;
+    background: #1877f2;
+}
+
+/* =========================
+   TIKTOK
+========================= */
+
+.social-link.tiktok {
+    color: #ffffff;
+
+    text-shadow:
+        -1px 0 #00f2ea,
+        1px 0 #ff0050;
+}
+
+/* =========================
+   SHINE
+========================= */
+
+.social-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -80%;
+
+    width: 45%;
+    height: 100%;
+
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    animation: socialShine 5s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* ANIMASI SHINE */
+
+@keyframes socialShine {
+
+    0% {
+        left: -80%;
+    }
+
+    45% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
+
+}
+
+/* =========================
+   SOSIAL MEDIA - FINISHING
+========================= */
+
+.social-links {
+    gap: 10px;
+    padding: 2px 0;
+}
+
+.social-link {
+    padding: 5px 8px;
+    font-size: 14px;
+}
+
+.social-link i {
+    font-size: 17px;
+}

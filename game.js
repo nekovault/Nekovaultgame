@@ -1,0 +1,46 @@
+// =========================
+// DATABASE GAME
+// =========================
+
+const gameList = [
+    "renpy/clownsquad/game.js",
+    "renpy/milfycity/game.js",
+    "renpy/findingmia/game.js",
+    "unity/yakuzarogue/game.js",
+    "unity/summerclover/game.js",
+    "renpy/shatteredminds/game.js",
+    "renpy/forbiddenthoughts/game.js",
+    "renpy/mafiacertificate/game.js",
+    "renpy/fromthesin/game.js",
+
+    "renpy/hsoulcaller/game.js",
+    "renpy/bbanother/game.js",    
+    "renpy/abyssallust/game.js",
+    "renpy/mayflay/game.js",  
+    "renpy/lifegate/game.js",    
+    "renpy/confinedandhorny/game.js",
+    "renpy/re-even/game.js",
+    "renpy/deathless/game.js",
+    "renpy/echoesoff2990/game.js",
+    "renpy/cristalys/game.js",
+    "renpy/boundbylust/game.js",
+    "renpy/lustvillage/game.js",
+    "renpy/anordinarilife/game.js",
+    "renpy/distortium/game.js",
+    "renpy/loveandtemptation/game.js",
+    "renpy/loveandtemptation1-9/game.js",
+    "renpy/hana2share/game.js",
+    "renpy/thatnewteacher/game.js",
+    "renpy/astreon/game.js",
+    "renpy/thelastyear/game.js",
+    "unity/happiness/game.js",
+    "renpy/echoes/game.js",
+    "rpgm/asimple/game.js",
+    "rpgm/zombiereatret2/game.js",
+    "rpgm/zombiereatret/game.js",
+    "renpy/artifice/game.js",
+    "renpy/devotedwife/game.js",
+    "renpy/stolen/game.js",
+    "renpy/theasmodeuseyes/game.js", 
+    "renpy/agent17/game.js"
+];

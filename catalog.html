@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Catalog - NekoVault</title>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+    <a href="index.html" class="logo">
+        <img src="assets/logo/logo.png" alt="Gaming NekoVault">
+    </a>
+
+    <div class="header-right">
+
+        <button class="icon-btn" id="menuBtn">
+
+          <span class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+        </button>
+        
+    </div>
+
+</header>
+    
+    <!-- MENU PANEL -->
+<div class="menu-panel" id="menuPanel">
+
+    <div class="menu-search">
+        <i class="ri-search-line"></i>
+
+        <input
+    type="text"
+    id="searchInput"
+    placeholder="Search games..."
+    
+    >
+    
+    </div>
+    
+    <div class="search-results" id="searchResults">
+    </div>
+
+    <div class="menu-item">
+        <span>Genres</span>
+        <i class="ri-arrow-down-s-line"></i>
+    </div>
+
+    <div class="menu-item">
+        <span>Engines</span>
+        <i class="ri-arrow-down-s-line"></i>
+    </div>
+
+</div>
+
+
+     <!-- CATALOG HEADER -->
+<h1 class="catalog-title">Catalog Game</h1>
+
+<div class="catalog-sort">
+
+    <span class="sort-label">Sort:</span>
+
+    <button id="sortNewest" class="sort-btn active">
+        Terbaru
+    </button>
+
+    <button id="sortAZ" class="sort-btn">
+        A-Z
+    </button>
+
+</div>
+
+<div class="catalog-info">
+
+    <span id="gameCount">0 Games</span>
+
+    <button id="filterBtn" class="filter-btn">
+        Filter
+    </button>
+
+</div>
+
+
+<!-- =========================
+     FILTER ENGINE
+========================= -->
+
+<div id="filterPanel" class="filter-panel">
+
+    <button data-engine="all">
+        Semua
+    </button>
+
+    <button data-engine="Ren'Py">
+        Ren'Py
+    </button>
+
+    <button data-engine="RPG Maker">
+        RPG Maker
+    </button>
+
+    <button data-engine="Unity">
+        Unity
+    </button>
+
+</div>
+
+<h2 class="catalog-title">Semua Game</h2>
+
+<div class="catalog-grid" id="catalogGrid">
+</div>
+    
+    
+     <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+
+    <a href="index.html" class="nav-item">
+        <i class="ri-home-5-line"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="catalog.html" class="nav-item active">
+        <i class="ri-apps-2-line"></i>
+        <span>Catalog</span>
+    </a>
+
+    <a href="traktir.html" class="nav-item">
+        <i class="ri-cup-line"></i>
+        <span>Traktir</span>
+    </a>
+
+    <a href="panduan.html" class="nav-item">
+        <i class="ri-question-line"></i>
+        <span>Panduan</span>
+    </a>
+
+</nav>
+
+    <script src="game.js"></script>
+    <script src="script.js"></script>
+    <script src="catalog.js"></script>
+    <script src="search.js"></script>
+        
+</body>
+</html>

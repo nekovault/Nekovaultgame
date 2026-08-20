@@ -1,0 +1,587 @@
+/* =========================
+   HEADER
+========================= */
+
+body{
+
+    font-family: "Poppins", sans-serif;
+    
+    margin:0;
+    background:#000;
+    color:#fff;
+}
+
+.game-header{
+    width:100%;
+    aspect-ratio:16 / 9;
+    overflow:hidden;
+    position:relative;
+    background:#111;
+}
+
+.game-cover{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    
+    transform: scale(1.0) 
+    translateY(8px);
+}
+
+.cover-overlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:20%;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0) 40%,
+        rgba(0,0,0,.4) 75%,
+        #000 100%
+    );
+
+    pointer-events:none;
+}
+
+/* Tombol Kembali */
+
+.back-btn{
+    position:absolute;
+    top:18px;
+    left:18px;
+
+    width:100px;
+    height:100px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+    background:rgba(0,0,0,.45);
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:100px;
+    font-weight:bold;
+
+    z-index:999;
+}
+
+.game-info{
+    padding: 24px 24px 0;
+    text-align: left;
+   font-size: 30px;
+}
+
+#gameTitle{
+    margin: 0;
+    text-align: left;
+}
+
+.game-developer{
+    margin: 8px 0 0;
+    text-align: left;
+    color: #9ca3af;
+    font-size:40px;
+}
+
+.game-developer span{
+    font-weight: 400;
+
+    background: linear-gradient(90deg, #ffffff, #b86cff);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+.platform-badges{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:18px;
+}
+
+.badge{
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    font-size:30px;
+
+    font-weight:600;
+
+    border:2px solid #8b5cf6;
+
+    background:#1b1028;
+
+    color:#d8b4fe;
+}
+
+.badge.uncensored {
+    border-color: #22c55e;
+    background: #0f2a18;
+    color: #4ade80;
+}
+
+.badge.censored {
+    border-color: #ef4444;
+    background: #2a0f0f;
+    color: #f87171;
+}
+
+/* STATUS ONGOING */
+.badge.status-ongoing {
+    border-color: #22c55e;
+    background: #0f2a18;
+    color: #4ade80;
+}
+
+/* STATUS COMPLETE */
+.badge.status-complete {
+    border-color: #ef4444;
+    background: rgba(70, 0, 0, 0.65);
+    color: #f87171;
+}
+
+/* STATUS ABANDONED */
+.badge.status-abandoned {
+    border-color: #f59e0b;
+    background: rgba(70, 45, 0, 0.65);
+    color: #fbbf24;
+}
+
+.game-details{
+    margin:28px 16px;
+    padding:22px;
+
+    background:rgb(32, 22, 58);
+    border:1px solid rgb(120, 80, 255);
+
+    border-radius:30px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px 18px;
+
+    box-shadow:0 0 15px rgba(140,80,255,.18);
+}
+
+.detail-item span{
+    display:block;
+
+    color:#7b8798;
+
+    font-size:35px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:8px;
+
+    text-transform:uppercase;
+}
+
+.detail-item p{
+    margin:0;
+
+    color:white;
+
+    font-size:38px;
+
+    font-weight:600;
+}
+
+.language-item{
+    margin-bottom:-4px;
+}
+
+.language-name{
+    color:#fff;
+    font-size:38px;
+    font-weight:600;
+}
+
+.language-credit{
+    margin-top:4px;
+    color:#d79cff;
+    font-size:29px;
+    font-weight:700;
+    text-shadow:
+        0 0 6px #c66dff,
+        0 0 12px #b84dff;
+}
+
+.genre-section{
+    margin:24px 16px;
+}
+
+.genre-title{
+    margin:0;
+    color:#ffffff;
+    font-size:35px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.genre-line{
+    margin:8px 0 14px;
+    width:100%;
+    height:1px;
+    background:linear-gradient(
+        to right,
+        rgb(140,80,255),
+        rgba(140,80,255,.2),
+        transparent
+    );
+}
+
+#genreCount{
+    color:#ffffff;
+    font-weight:600;
+}
+
+.genre-badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:22px 16px;
+}
+
+.genre-badge{
+    padding:10px 18px;
+
+    border:1px solid #d79cff;
+    border-radius:999px;
+
+    color:#d79cff;
+    background:rgba(123,77,255,.12);
+
+    font-size:30px;
+    font-weight:500;
+}
+
+.synopsis-section {
+    margin: 28px 28px;
+}
+
+.synopsis-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: white;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid #8b5cff;
+}
+
+.synopsis-text {
+    margin-top: 14px;
+
+    color: #c8c3d0;
+    font-size: 30px;
+    line-height: 1.6;
+
+    max-height: 180px;
+    overflow: hidden;
+
+    transition: max-height 1s ease;
+}
+
+.synopsis-text.expanded {
+    max-height: 2000px;
+}
+
+.show-more-btn {
+    margin-top: 10px;
+
+    background: none;
+    border: none;
+
+    color: #b56cff;
+    font-size: 30px;
+    font-weight: 600;
+
+    padding: 0;
+    cursor: pointer;
+}
+
+.preview-section{
+    margin:28px 16px;
+}
+
+.preview-title{
+    margin:0;
+
+    color:#fff;
+    font-size:35px;
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+.preview-line{
+    margin:8px 0 14px;
+
+    width:100%;
+    height:1px;
+
+    background:linear-gradient(
+        to right,
+        rgb(140,80,255),
+        rgba(140,80,255,.2),
+        transparent
+    );
+}
+
+.preview-slider{
+    display:flex;
+
+    gap:12px;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    scroll-behavior:smooth;
+
+    scroll-snap-type:x mandatory;
+
+    padding-bottom:8px;
+
+    scrollbar-width:none;
+}
+
+.preview-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.preview-slider img {
+    width: 70%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    
+    border: 2px solid #8b5cf6;
+    border-radius: 12px;
+
+    background: rgba(139, 92, 246, 0.12);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.25);
+}
+
+.download-section {
+    margin-top: 50px;
+}
+
+.download-section h2 {
+    margin: 0;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.download-platform {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(139, 92, 246, 0.5);
+    color: #c9a7ff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 50px;
+    
+    flex: 1;
+    padding: 20px 30px;
+    border: 3px solid rgba(139, 92, 246, 0.5);
+    border-radius: 20px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.download-btn svg {
+    width: 45px;
+    height: 45px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    flex-shrink: 0;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* =========================
+   EFEK PREMIUM DOWNLOAD
+   ========================= */
+
+.download-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+/* BERBAYAR - EMAS */
+.download-btn:nth-child(1) {
+    background:
+        linear-gradient(
+            135deg,
+            #6b4b00,
+            #c99718,
+            #ffd95a,
+            #b8860b
+        );
+
+    border-color: #e6bd45;
+
+    box-shadow:
+        0 0 10px rgba(255, 200, 50, 0.7),
+        0 0 20px rgba(255, 200, 50, 0.35);
+}
+
+/* GRATIS - UNGU */
+.download-btn:nth-child(2) {
+    background:
+        linear-gradient(
+            135deg,
+            #32134f,
+            #7138a8,
+            #b66be8,
+            #7138a8
+        );
+
+    border-color: #a96be0;
+
+    box-shadow:
+        0 0 10px rgba(170, 90, 230, 0.7),
+        0 0 20px rgba(170, 90, 230, 0.35);
+}
+
+
+/* =========================
+   KILAP
+   ========================= */
+
+.download-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: -50%;
+    left: -130%;
+
+    width: 25%;
+    height: 220%;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(255,255,255,0),
+            rgba(255,255,255,0.55),
+            rgba(255,255,255,0)
+        );
+
+    transform: rotate(25deg);
+
+    filter: blur(2px);
+
+    animation: shine 3s infinite;
+
+    pointer-events: none;
+}
+
+
+/* ANIMASI KILAP */
+
+@keyframes shine {
+
+    0% {
+        left: -130%;
+    }
+
+    100% {
+        left: 160%;
+    }
+
+}
+
+/* =========================
+   EFEK SAAT DITEKAN
+========================= */
+
+.download-btn {
+    transition: transform 0.15s ease;
+}
+
+.download-btn:active {
+    transform: scale(0.97);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    margin-top: 50px;
+    padding: 45px 30px 60px;
+    background: #0b111b;
+    border-top: 1px solid #9b6cff;
+}
+
+/* LOGO */
+.footer-logo {
+    margin-bottom: 35px;
+}
+
+.footer-logo img {
+    width: 270px;
+    height: auto;
+    display: block;
+}
+
+/* KOLOM FOOTER */
+.footer-columns {
+    display: flex;
+    gap: 70px;
+}
+
+/* SETIAP KOLOM */
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h3 {
+    margin: 0 0 22px;
+    color: #9b6cff;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.footer-column p {
+    margin: 0 0 16px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.download-size {
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 5px;
+}
