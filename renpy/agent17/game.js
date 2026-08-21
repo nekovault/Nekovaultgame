@@ -42,7 +42,7 @@ window.game = {
     
     size: "2.7 GB / 2.6 GB",
 
-    linux: false,
+    linux: true,
 
     mac: false,
 
