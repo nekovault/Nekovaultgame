@@ -13,7 +13,7 @@ window.game = {
     engine: "Ren'Py",
     
     status: "Complete",
-    badge: "New",
+    badge: "",
 
     released: "03-11-2023",
 
@@ -27,7 +27,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: true,
+    featured: false,
     
     folder: "9.5 GB",
 

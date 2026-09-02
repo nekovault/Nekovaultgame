@@ -13,7 +13,7 @@ window.game = {
     engine: "Unity",
     
     status: "Complete",
-    badge: "New",
+    badge: "",
 
     released: "01-12-2024",
 
@@ -25,7 +25,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: true,
+    featured: false,
     
     folder: "unity/summerclover",
 

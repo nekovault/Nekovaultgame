@@ -8,16 +8,16 @@ window.game = {
 
     developer: "OldCats",
 
-    version: "0.1",
+    version: "0.4",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
     released: "30-08-2026",
 
-    updated: "20-08-2026",
+    updated: "31-09-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/echoes",
 
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
 
-    size: "3.2 GB / 2.96 GB",
+    size: "1.2 GB / 4.2 GB",
     
     linux: false,
 
@@ -65,7 +65,7 @@ window.game = {
     // TAG
     // =========================
 
-    genres: "3DCGI, Animated, Mobile Game,School Setting, VN, Male protagonis, Romance, Vaginal Sex",
+    genres: "3DCG, Animated, Male protagonist, Mobile game, Voyeurism, School Setting, Vaginal Sex, Big tits, Big Ass, Handjob, Oral sex, Romance",
     
     synopsis: "Apa itu Gema? Ini adalah kisah yang didorong oleh karakter tentang MC, seorang mahasiswa film muda yang mencoba melarikan diri dari masa lalu yang menyakitkan dengan memulai kembali di Universitas Oakheart. Untuk bertahan hidup, dia memakai topeng— pria yang menawan, jenaka, dan ramah. Namun di balik layar, dia hanyalah seorang sutradara yang pendiam dan jeli, takut membiarkan siapa pun melihat dirinya yang sebenarnya. Sebagai MC, Anda akan menavigasi kehidupan baru ini dan membangun hubungan dengan enam wanita muda yang sangat berbeda, masing-masing berjuang dengan rahasia mereka sendiri dan kebohongan yang mereka bisikkan untuk diri mereka sendiri. Pilihan Anda akan menentukan apakah Anda dapat menerobos dinding— dan— Anda sendiri untuk menemukan koneksi asli.",
 
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "",
-    freeLink: "https://move2link.co/8b55728"
+    freeLink: "https://move2link.co/ce45a67"
 },
 
 };

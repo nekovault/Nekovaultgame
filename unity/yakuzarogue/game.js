@@ -13,7 +13,7 @@ window.game = {
     engine: "Unity",
     
     status: "Complete",
-    badge: "New",
+    badge: "",
 
     released: "12-08-2026",
 
@@ -25,7 +25,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: true,
+    featured: false,
     
     folder: "unity/yakuzarogue",
 
