@@ -8,16 +8,16 @@ window.game = {
 
     developer: "LoveStory",
 
-    version: "0.57",
+    version: "0.60",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "14-02-2026",
+    released: "01-09-2026",
 
-    updated: "26-05-2026",
+    updated: "02-09-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/devotedwife",
 
@@ -74,7 +74,7 @@ window.game = {
     free: true,
 
     paidLink: "",
-    freeLink: "https://move2link.co/b8ca35a"
+    freeLink: "https://move2link.co/4c5d1e1"
 },
 
 };
