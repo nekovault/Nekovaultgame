@@ -13,7 +13,7 @@ window.game = {
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "New",
+    badge: "",
 
     released: "01-08-2026",
 
@@ -25,7 +25,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: true,
+    featured: false,
     
     folder: "renpy/summertime",
 
