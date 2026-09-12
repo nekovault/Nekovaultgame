@@ -4,7 +4,7 @@ window.game = {
     // INFORMASI DASAR
     // =========================
 
-    title: "Isekai Paradise",
+    title: "Isekai Paradise-Fixed",
 
     developer: "Soultice",
 
@@ -75,8 +75,8 @@ window.game = {
     paid: true,
     free: true,
 
-    paidLink: "https://move2link.co/b289d36",
-    freeLink: "https://move2link.co/1107bcf"
+    paidLink: "https://move2link.co/37a7ccb",
+    freeLink: "https://move2link.co/8cd1e94"
 },
 
 };
