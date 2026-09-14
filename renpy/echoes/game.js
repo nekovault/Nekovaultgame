@@ -13,7 +13,7 @@ window.game = {
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "Update",
+    badge: "",
 
     released: "30-08-2026",
 
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: true,
+    featured: false,
     
     folder: "renpy/echoes",
 

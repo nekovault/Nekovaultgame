@@ -4,20 +4,20 @@ window.game = {
     // INFORMASI DASAR
     // =========================
 
-    title: "Suggar Daddy: Bought & Bound",
+    title: "Reya The Elf",
 
-    developer: "Sugar Daddy25",
+    developer: "Yooshi",
 
-    version: "0.2",
+    version: "0.7.4 SE",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "New",
 
-    released: "-",
+    released: "26-07-2026",
 
-    updated: "24-02-2026",
+    updated: "03-08-2026",
 
     languages: [
          "English",
@@ -26,9 +26,9 @@ window.game = {
     
     showCredit: false,
 
-    featured: false,
+    featured: true,
     
-    folder: "renpy/suggardaddy",
+    folder: "renpy/reyatheelf",
 
     // =========================
     // PLATFORM
@@ -38,9 +38,9 @@ window.game = {
 
     android: true,
 
-    windows: true,
+    windows: false,
     
-    size: "1.34 GB / 1.33 GB",
+    size: "3 GB",
 
     linux: false,
 
@@ -65,9 +65,9 @@ window.game = {
     // TAG
     // =========================
 
-    genres: "3DCGI, Male Protagonist, Sandbox, Mobile game, Animated, Romance, Role-Playing, Visual Novel",
+    genres: "3dcg, Animated, Corruption, Creampie, Female Protagonist, Footjob, Groping, Handjob, Lesbian, Masturbation, Oral Sex, Prostitution, Sandbox, Teasing, Titfuck, Vaginal Sex, Virgin",
     
-    synopsis: "Anda bermain sebagai CEO kaya yang menjalani kehidupan ganda - mengelola uang, pengaruh, dan hubungan sambil menjaga rahasia berbahaya tersembunyi. Setiap pilihan memiliki konsekuensi, dan kontrol tidak pernah dijamin.\n\nGim ini masih dibangun. Sistem, visual, dan konten berevolusi langkah demi langkah, dan ruang ini ada untuk membagikan proses itu secara terbuka.",
+    synopsis: "Di dunia tempat berbagai ras belajar hidup berdampingan, hiduplah seorang gadis elf. Ia baru saja berulang tahun ke-18, dan ayahnya memintanya untuk membantunya. Ayahnya berhutang kepada Sam—saudaranya. Reya memutuskan untuk membantu ayahnya dan pindah ke kota besar untuk bekerja bagi Sam. Seorang gadis pemalu dan polos, yang tidak terbiasa hidup di tengah keramaian, akan hidup sendirian.",
 
 
     
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "",
-    freeLink: "https://move2link.co/91648ab"
+    freeLink: "https://move2link.co/18b9cc6"
 },
 
 };
