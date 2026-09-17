@@ -13,7 +13,7 @@ window.game = {
     engine: "RPG Maker",
     
     status: "Complete",
-    badge: "New",
+    badge: "",
 
     released: "14-06-2026",
 
@@ -25,7 +25,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: true,
+    featured: false,
     
     folder: "rpgm/tsukishiro",
 
