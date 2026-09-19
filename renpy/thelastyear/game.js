@@ -8,16 +8,16 @@ window.game = {
 
     developer: "YuzuruRIN",
 
-    version: "0.5.5",
+    version: "0.6.1",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "05-05-2026",
+    released: "06-09-2026",
 
-    updated: "12-06-2026",
+    updated: "18-09-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/thelastyear",
 
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "",
-    freeLink: "https://sfl.gl/fqkKu"
+    freeLink: "https://sfl.gl/op7E8HPv"
 },
 
 };

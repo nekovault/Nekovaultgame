@@ -8,16 +8,16 @@ window.game = {
 
     developer: "Monoliva",
 
-    version: "Eps 4",
+    version: "Eps 5",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "08-08-2026",
+    released: "12-09-2026",
 
-    updated: "08-08-2026",
+    updated: "12-09-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/hsoulcaller",
 

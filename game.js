@@ -3,6 +3,9 @@
 // =========================
 
 const gameList = [
+    "renpy/60dayofus/game.js",
+    "renpy/hsoulcaller/game.js",
+    "renpy/thelastyear/game.js",
     "renpy/mycuteroomate/game.js",
     "renpy/neetangel/game.js",
     "renpy/stuckgame/game.js",
@@ -35,7 +38,6 @@ const gameList = [
     "renpy/forbiddenthoughts/game.js",
     "renpy/mafiacertificate/game.js",
     "renpy/fromthesin/game.js",
-    "renpy/hsoulcaller/game.js",
     "renpy/bbanother/game.js",    
     "renpy/abyssallust/game.js",
     "renpy/mayflay/game.js",  
@@ -54,7 +56,6 @@ const gameList = [
     "renpy/hana2share/game.js",
     "renpy/thatnewteacher/game.js",
     "renpy/astreon/game.js",
-    "renpy/thelastyear/game.js",
     "unity/happiness/game.js",
     "rpgm/asimple/game.js",
     "rpgm/zombiereatret2/game.js",
