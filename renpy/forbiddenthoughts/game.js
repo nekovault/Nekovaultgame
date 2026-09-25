@@ -8,16 +8,16 @@ window.game = {
 
     developer: "REN3D",
 
-    version: "Ch-2 Update 4",
+    version: "Ch-2 Update 5",
 
     engine: "Renpy",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "12-08-2026",
+    released: "20-09-2026",
 
-    updated: "12-08-2026",
+    updated: "20-09-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/forbiddenthuoghts",
 
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
     
-    size: "1.4 GB / 1.2 GB",
+    size: "2 GB",
 
     linux: false,
 
