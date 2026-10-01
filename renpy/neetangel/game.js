@@ -13,7 +13,7 @@ window.game = {
     engine: "-",
     
     status: "Ongoing",
-    badge: "New",
+    badge: "",
 
     released: "02-09-2026",
 
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: true,
+    featured: false,
     
     folder: "renpy/neetangel",
 

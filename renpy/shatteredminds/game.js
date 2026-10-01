@@ -8,16 +8,16 @@ window.game = {
 
     developer: "eXtasy games",
 
-    version: "0.28",
+    version: "0.29BETA",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "07-08-2026",
+    released: "25-09-2026",
 
-    updated: "15-08-2026",
+    updated: "29-09-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/shatteredminds",
 
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
     
-    size: "2 GB / 3 GB",
+    size: "2 GB / 5 GB",
 
     linux: false,
 
@@ -72,11 +72,11 @@ window.game = {
 
     
     download: {
-    paid: false,
+    paid: true,
     free: true,
 
-    paidLink: "",
-    freeLink: "https://move2link.co/c528164"
+    paidLink: "https://move2link.co/7006ea3",
+    freeLink: "https://move2link.co/f1bdc8f"
 },
 
 };
