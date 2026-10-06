@@ -13,11 +13,11 @@ window.game = {
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "19-07-2025",
+    released: "03-10-2026",
 
-    updated: "04-08-2025",
+    updated: "16-09-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/deathless",
 
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
     
-    size: "846 MB",
+    size: "200 MB / 1 GB",
 
     linux: false,
 
@@ -72,11 +72,11 @@ window.game = {
 
     
     download: {
-    paid: false,
+    paid: true,
     free: true,
 
-    paidLink: "",
-    freeLink: "https://move2link.co/7ea6f31"
+    paidLink: "https://move2link.co/7ea6f31",
+    freeLink: "https://sfl.gl/gmXS"
 },
 
 };
