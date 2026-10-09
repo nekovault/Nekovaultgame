@@ -13,7 +13,7 @@ window.game = {
     engine: "-",
     
     status: "Complete",
-    badge: "New",
+    badge: "",
 
     released: "??",
 
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: true,
+    featured: false,
     
     folder: "rpgm/runawai",
 

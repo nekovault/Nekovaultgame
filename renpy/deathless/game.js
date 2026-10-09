@@ -8,7 +8,7 @@ window.game = {
 
     developer: "Seacth",
 
-    version: "Ep-2 part 1",
+    version: "Ep-2 part 2",
 
     engine: "Ren'Py",
     

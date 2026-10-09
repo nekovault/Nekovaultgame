@@ -8,16 +8,16 @@ window.game = {
 
     developer: "Tukann",
 
-    version: "0.28",
+    version: "0.29.1",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "07-08-2026",
+    released: "06-10-2026",
 
-    updated: "07-08-2026",
+    updated: "06-10-2026",
 
     languages: [
          "English",
@@ -25,7 +25,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/confinedandhorny",
 
@@ -39,7 +39,7 @@ window.game = {
 
     windows: true,
     
-    size: "1.9 GB",
+    size: "2 GB",
 
     linux: false,
 
@@ -75,7 +75,7 @@ window.game = {
     free: true,
 
     paidLink: "",
-    freeLink: "https://sfl.gl/hxF5"
+    freeLink: "https://exe.io/TEhBDBz"
 },
 
 };

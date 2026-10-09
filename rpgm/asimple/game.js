@@ -8,12 +8,12 @@ window.game = {
 
     developer: "Countercurren Tea Party",
 
-    version: "1.2.4",
+    version: "1.3",
 
     engine: "RPG Maker",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
     released: "01-08-2026",
 
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: false,
+    featured: true,
     
     folder: "rpgm/asimple",
 
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "",
-    freeLink: "https://sfl.gl/GSwkDnF1"
+    freeLink: "https://exe.io/9qN7Z"
 },
 
 };
