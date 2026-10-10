@@ -230,9 +230,29 @@ const likedStorageKey = `nekovault-liked:${folder}`;
 
 function setLikeButtonState(hasLiked) {
     if (!likeButton) return;
-    likeButton.textContent = hasLiked
-        ? "❤️ Disukai"
-        : `❤️ Like ${likeCountElement ? likeCountElement.textContent : "0"}`;
+
+    // Pertahankan elemen span jumlah Like agar referensi JavaScript
+    // tetap terhubung ke angka yang terlihat di halaman.
+    let label = likeButton.querySelector(".game-like-label");
+
+    if (!label) {
+        label = document.createElement("span");
+        label.className = "game-like-label";
+
+        if (likeCountElement && likeCountElement.parentNode === likeButton) {
+            likeButton.insertBefore(label, likeCountElement);
+            // Hapus teks lama "❤️ Like" tanpa menghapus span jumlah.
+            Array.from(likeButton.childNodes).forEach(node => {
+                if (node !== label && node !== likeCountElement && node.nodeType === Node.TEXT_NODE) {
+                    node.remove();
+                }
+            });
+        } else {
+            likeButton.prepend(label);
+        }
+    }
+
+    label.textContent = hasLiked ? "❤️ Disukai" : "❤️ Like";
     likeButton.disabled = hasLiked;
     likeButton.setAttribute("aria-pressed", hasLiked ? "true" : "false");
 }
