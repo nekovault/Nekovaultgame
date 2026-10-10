@@ -206,6 +206,149 @@ paidBtn.addEventListener("click", () => {
 freeBtn.addEventListener("click", () => {
     window.open(window.game.download.freeLink, "_blank");
 });
+
+// ===============================
+// KOMENTAR NEKOVAULT - SUPABASE
+// ===============================
+
+
+const SUPABASE_URL = "https://rjsuhsvzdyiefdnuvatt.supabase.co/rest/v1/";
+const SUPABASE_KEY = "sb_publishable_K7emjmGihXhgB2MVqpmXOA_x2V09G6j";
+
+const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+const commentNickname = document.getElementById("comment-nickname");
+const commentContent = document.getElementById("comment-content");
+const submitComment = document.getElementById("submit-comment");
+const commentsList = document.getElementById("comments-list");
+
+
+// ===============================
+// LOAD KOMENTAR
+// ===============================
+
+async function loadComments() {
+
+    commentsList.innerHTML = "Memuat komentar...";
+
+    const { data, error } = await supabaseClient
+        .from("comments")
+        .select("id, nickname, content, created_at")
+        .eq("game_id", folder)
+        .order("created_at", { ascending: false });
+
+    if (error) {
+        console.error("Gagal memuat komentar:", error);
+        commentsList.innerHTML = "Gagal memuat komentar.";
+        return;
+    }
+
+    if (!data || data.length === 0) {
+        commentsList.innerHTML = "Belum ada komentar.";
+        return;
+    }
+
+    commentsList.innerHTML = "";
+
+    data.forEach(comment => {
+
+        const item = document.createElement("div");
+        item.className = "comment-item";
+
+        item.innerHTML = `
+            <div class="comment-nickname">
+                ${escapeHTML(comment.nickname)}
+            </div>
+
+            <div class="comment-content">
+                ${escapeHTML(comment.content)}
+            </div>
+        `;
+
+        commentsList.appendChild(item);
+    });
+}
+
+
+// ===============================
+// KIRIM KOMENTAR
+// ===============================
+
+submitComment.addEventListener("click", async () => {
+
+    const nickname = commentNickname.value.trim();
+    const content = commentContent.value.trim();
+
+    if (!nickname) {
+        alert("Nickname wajib diisi!");
+        return;
+    }
+
+    if (!content) {
+        alert("Komentar wajib diisi!");
+        return;
+    }
+
+    if (nickname.length > 30) {
+        alert("Nickname maksimal 30 karakter!");
+        return;
+    }
+
+    submitComment.disabled = true;
+    submitComment.textContent = "Mengirim...";
+
+    const { error } = await supabaseClient
+        .from("comments")
+        .insert({
+            nickname: nickname,
+            content: content,
+            game_id: folder
+        });
+
+    if (error) {
+
+        console.error("Gagal mengirim komentar:", error);
+
+        alert("Komentar gagal dikirim.");
+
+        submitComment.disabled = false;
+        submitComment.textContent = "💬 Kirim Komentar";
+
+        return;
+    }
+
+    commentNickname.value = "";
+    commentContent.value = "";
+
+    submitComment.disabled = false;
+    submitComment.textContent = "💬 Kirim Komentar";
+
+    loadComments();
+});
+
+
+// ===============================
+// AMANKAN TAMPILAN KOMENTAR
+// ===============================
+
+function escapeHTML(text) {
+
+    const div = document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+}
+
+
+// ===============================
+// MULAI
+// ===============================
+
+loadComments();
     
     document.querySelector(".game-header")
     .style.setProperty("--cover", `url(${folder}/${window.game.cover})`);
