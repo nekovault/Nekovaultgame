@@ -1420,3 +1420,146 @@ body {
     transform: scale(0.98);
 
 }
+
+
+/* ==============================
+   FIX RESPONSIVE MENU NEKOVAULT
+   ============================== */
+
+.menu-panel {
+    position: fixed;
+
+    top: 90px;
+    right: 12px;
+    left: auto;
+
+    width: min(420px, calc(100vw - 24px));
+
+    height: auto;
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+
+    box-sizing: border-box;
+    border: 1px solid #30263b;
+    border-radius: 18px;
+
+    transform: translateX(110%);
+    transition: transform 0.3s ease;
+}
+
+.menu-panel.active {
+    transform: translateX(0);
+}
+
+/* HP dengan layar pendek */
+@media (max-height: 600px) {
+    .menu-panel {
+        max-height: calc(100vh - 120px);
+        top: 65px;
+    }
+}
+
+/* HP dengan layar sempit */
+@media (max-width: 480px) {
+    .menu-panel {
+        right: 8px;
+        width: calc(100vw - 16px);
+        max-height: calc(100vh - 170px);
+    }
+}
+
+
+/* =====================================
+   FIX RESPONSIVE DESKTOP NEKOVAULT
+   ===================================== */
+
+/* Laptop dan tablet lebar */
+@media (min-width: 768px) {
+
+    /* Batasi lebar konten utama */
+    .banner-section,
+    .announcement,
+    .game-section {
+        width: calc(100% - 48px);
+        max-width: 1180px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .banner-section {
+        margin-top: 24px;
+    }
+
+    .announcement {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .announcement-title {
+        margin-top: 24px;
+    }
+
+    .section-title {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Kartu game: batasi jumlah kolom agar laptop tetap rapi */
+    .game-grid,
+    .catalog-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .game-grid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .catalog-grid {
+        width: calc(100% - 48px);
+        max-width: 1180px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Panel pencarian lebih ringkas di desktop */
+    .menu-panel {
+        top: 96px;
+        right: 24px;
+        left: auto;
+        width: min(360px, calc(100vw - 48px));
+        max-height: calc(100vh - 120px);
+        padding: 20px;
+    }
+
+    .menu-search input {
+        min-width: 0;
+    }
+
+    /* Navigasi bawah tidak melebar sepanjang laptop */
+    .bottom-nav {
+        left: 50%;
+        right: auto;
+        width: min(700px, calc(100vw - 48px));
+        transform: translateX(-50%);
+    }
+
+/* Monitor desktop lebar: lima kartu per baris */
+@media (min-width: 1440px) {
+    .game-grid,
+    .catalog-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+}
+
+/* Desktop lebar */
+@media (min-width: 1200px) {
+
+    .banner-section,
+    .announcement,
+    .game-section {
+        max-width: 1180px;
+    }
+}
