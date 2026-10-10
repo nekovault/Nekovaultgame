@@ -714,3 +714,46 @@ body{
     color: #777777;
     font-size: 30px;
 }
+
+
+/* Judul komentar dan tombol Like sejajar */
+.comments-heading-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.comments-heading-row h2 {
+    margin: 0;
+}
+
+/* Tombol Like NekoVault */
+.game-like-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 14px;
+    
+    margin-right: 400px;
+    border: 1px solid #a855f7;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7028a8, #a855f7);
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.25);
+}
+
+.game-like-button:active {
+    transform: scale(0.96);
+}
+
+.game-like-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

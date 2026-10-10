@@ -220,6 +220,73 @@ const supabaseClient = window.supabase.createClient(
     SUPABASE_KEY
 );
 
+// ===============================
+// LIKE GAME NEKOVAULT - SUPABASE
+// Memerlukan RPC increment_game_like di Supabase.
+// ===============================
+const likeButton = document.getElementById("game-like-button");
+const likeCountElement = document.getElementById("game-like-count");
+const likedStorageKey = `nekovault-liked:${folder}`;
+
+function setLikeButtonState(hasLiked) {
+    if (!likeButton) return;
+    likeButton.textContent = hasLiked
+        ? "❤️ Disukai"
+        : `❤️ Like ${likeCountElement ? likeCountElement.textContent : "0"}`;
+    likeButton.disabled = hasLiked;
+    likeButton.setAttribute("aria-pressed", hasLiked ? "true" : "false");
+}
+
+async function loadGameLikes() {
+    if (!likeButton || !likeCountElement) return;
+
+    const { data, error } = await supabaseClient
+        .from("game_likes")
+        .select("like_count")
+        .eq("game_id", folder)
+        .maybeSingle();
+
+    if (error) {
+        console.error("Gagal memuat jumlah Like:", error);
+        likeCountElement.textContent = "0";
+    } else {
+        likeCountElement.textContent = String(data?.like_count ?? 0);
+    }
+
+    setLikeButtonState(localStorage.getItem(likedStorageKey) === "1");
+}
+
+if (likeButton && likeCountElement) {
+    likeButton.addEventListener("click", async () => {
+        if (localStorage.getItem(likedStorageKey) === "1") {
+            setLikeButtonState(true);
+            return;
+        }
+
+        likeButton.disabled = true;
+        likeButton.textContent = "❤️ Menyimpan...";
+
+        const { data, error } = await supabaseClient.rpc(
+            "increment_game_like",
+            { p_game_id: folder }
+        );
+
+        if (error) {
+            console.error("Gagal menyimpan Like:", error);
+            likeButton.disabled = false;
+            likeButton.textContent = `❤️ Like ${likeCountElement.textContent}`;
+            alert("Like gagal disimpan. Coba lagi sebentar.");
+            return;
+        }
+
+        likeCountElement.textContent = String(data ?? 0);
+        localStorage.setItem(likedStorageKey, "1");
+        setLikeButtonState(true);
+    });
+
+    loadGameLikes();
+}
+
 const commentNickname = document.getElementById("comment-nickname");
 const commentContent = document.getElementById("comment-content");
 const submitComment = document.getElementById("submit-comment");
