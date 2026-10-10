@@ -212,7 +212,7 @@ freeBtn.addEventListener("click", () => {
 // ===============================
 
 
-const SUPABASE_URL = "https://rjsuhsvzdyiefdnuvatt.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://rjsuhsvzdyiefdnuvatt.supabase.co";
 const SUPABASE_KEY = "sb_publishable_K7emjmGihXhgB2MVqpmXOA_x2V09G6j";
 
 const supabaseClient = window.supabase.createClient(
