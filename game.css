@@ -585,3 +585,132 @@ body{
     font-weight: 600;
     margin-top: 5px;
 }
+
+/* ================================
+   KOMENTAR NEKOVAULT
+================================ */
+
+.comments-section {
+    margin-top: 30px;
+    padding: 0 18px 30px;
+}
+
+/* Judul komentar */
+.comments-section h2 {
+    margin: 0 0 22px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #6d3bbd;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* Kotak form */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 700px;
+}
+
+/* Input nickname & textarea */
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid #6d3bbd;
+    border-radius: 8px;
+    background: #0b0b0b;
+    color: #ffffff;
+    font-size: 35px;
+    outline: none;
+    font-family: inherit;
+}
+
+/* Placeholder */
+.comment-form input::placeholder,
+.comment-form textarea::placeholder {
+    color: #999999;
+}
+
+/* Saat diklik */
+.comment-form input:focus,
+.comment-form textarea:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.35);
+}
+
+/* Kotak komentar */
+.comment-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Tombol kirim */
+.comment-submit {
+    width: fit-content;
+    padding: 11px 20px;
+    border: 1px solid #9b4dff;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #7b2cff, #a855f7);
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Efek tombol */
+.comment-submit:hover {
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+.comment-submit:active {
+    transform: scale(0.98);
+}
+
+/* Daftar komentar */
+#comments-list {
+    margin-top: 25px;
+}
+
+/* Loading */
+.comments-loading {
+    color: #aaaaaa;
+    font-size: 35px;
+}
+
+/* Satu komentar */
+.comment-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #33205c;
+    border-radius: 10px;
+    background: #080808;
+}
+
+/* Nama */
+.comment-nickname {
+    margin-bottom: 7px;
+    color: #b56cff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Isi komentar */
+.comment-content {
+    color: #eeeeee;
+    font-size: 34px;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+/* Tanggal */
+.comment-date {
+    margin-top: 8px;
+    color: #777777;
+    font-size: 30px;
+}
