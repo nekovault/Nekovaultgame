@@ -4,6 +4,10 @@
 
 const gameList = [
     "renpy/desirium/game.js",
+    "renpy/thelastyear/game.js",
+    "renpy/antipoda/game.js",
+    "renpy/summerremake/game.js",
+    "renpy/risefrom/game.js",
     "rpgm/asimple/game.js",
     "renpy/confinedandhorny/game.js",
     "renpy/deathless/game.js",
@@ -25,7 +29,6 @@ const gameList = [
     "renpy/oncelifetime/game.js",
     "renpy/60dayofus/game.js",
     "renpy/hsoulcaller/game.js",
-    "renpy/thelastyear/game.js",
     "renpy/mycuteroomate/game.js",
     "renpy/neetangel/game.js",
     "renpy/stuckgame/game.js",

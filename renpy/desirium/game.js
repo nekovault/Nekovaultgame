@@ -36,11 +36,11 @@ window.game = {
     
     contentRating: "Uncencored",
 
-    android: false,
+    android: true,
 
     windows: true,
     
-    size: "5 GB",
+    size: "1 GB / 5 GB",
 
     linux: false,
 
@@ -72,11 +72,11 @@ window.game = {
 
     
     download: {
-    paid: false,
+    paid: true,
     free: true,
 
-    paidLink: "",
-    freeLink: "https://move2link.co/92c0b93"
+    paidLink: "https://move2link.co/4240d42",
+    freeLink: "https://move2link.co/df954c4"
 },
 
 };
