@@ -8,16 +8,16 @@ window.game = {
 
     developer: "NoGlory",
 
-    version: "0.1 Part 1",
+    version: "Act 1 Part 2",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "21-06-2026",
+    released: "20-09-2026",
 
-    updated: "08-07-2025",
+    updated: "12-10-2025",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/clownsquad",
 
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
     
-    size: "1.7 GB / 1.5 GB",
+    size: "2.5 GB / 2.4 GB",
 
     linux: false,
 
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "https://move2link.co/b4c25bc",
-    freeLink: "https://move2link.co/2473708"
+    freeLink: "https://move2link.co/75683e3"
 },
 
 };
