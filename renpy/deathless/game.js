@@ -13,7 +13,7 @@ window.game = {
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "Update",
+    badge: "",
 
     released: "03-10-2026",
 
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: true,
+    featured: false,
     
     folder: "renpy/deathless",
 

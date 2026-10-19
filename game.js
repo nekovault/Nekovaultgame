@@ -3,6 +3,8 @@
 // =========================
 
 const gameList = [
+    "renpy/thelastorder/game.js",
+    "renpy/projectsigris/game.js",
     "renpy/eclipsis/game.js",
     "renpy/strayincubus2/game.js",
     "renpy/clownsquad/game.js",
