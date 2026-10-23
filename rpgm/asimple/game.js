@@ -13,7 +13,7 @@ window.game = {
     engine: "RPG Maker",
     
     status: "Ongoing",
-    badge: "Update",
+    badge: "",
 
     released: "01-08-2026",
 
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: true,
+    featured: false,
     
     folder: "rpgm/asimple",
 

@@ -8,16 +8,16 @@ window.game = {
 
     developer: "Monoliva",
 
-    version: "Eps 5",
+    version: "Eps 7",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "12-09-2026",
+    released: "17-10-2026",
 
-    updated: "12-09-2026",
+    updated: "19-10-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/hsoulcaller",
 
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
     
-    size: "1.6 GB / 1.3 GB",
+    size: "2.5 GB / 2.4 GB",
 
     linux: false,
 
@@ -72,11 +72,11 @@ window.game = {
 
     
     download: {
-    paid: false,
+    paid: true,
     free: true,
 
-    paidLink: "",
-    freeLink: "https://move2link.co/ce55a14"
+    paidLink: "https://move2link.co/ce55a14",
+    freeLink: "https://move2link.co/f0e2b83"
 },
 
 };

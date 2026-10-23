@@ -13,7 +13,7 @@ window.game = {
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "Update",
+    badge: "",
 
     released: "06-10-2026",
 
@@ -25,7 +25,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: true,
+    featured: false,
     
     folder: "renpy/confinedandhorny",
 
