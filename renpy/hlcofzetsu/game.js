@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "",
-    freeLink: "https://move2link.co/e0c00ed"
+    freeLink: "https://move2link.co/d7a0edb"
 },
 
 };

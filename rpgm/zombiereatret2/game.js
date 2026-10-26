@@ -4,29 +4,29 @@ window.game = {
     // INFORMASI DASAR
     // =========================
 
-    title: "Zombie's Retreat 2",
+    title: "Zombie's Retreat 2: Gridlocked",
 
     developer: "Siren",
 
-    version: "1.0.1",
+    version: "1.1.5.1",
 
     engine: "RPG Maker",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "19-07-2026",
+    released: "23-10-2026",
 
-    updated: "21-07-2026",
+    updated: "23-10-2026",
 
     languages: [
          "English",
          "Indonesia",
     ],
     
-    showCredit: false,
+    showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "rpgm/zombiereatret2",
 
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
     
-    size: "1.89 GB",
+    size: "1.94 GB",
 
     linux: false,
 
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "",
-    freeLink: "https://move2link.co/bc2a2bc"
+    freeLink: "https://move2link.co/81b2461"
 },
 
 };
