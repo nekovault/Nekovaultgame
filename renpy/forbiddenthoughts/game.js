@@ -8,16 +8,16 @@ window.game = {
 
     developer: "REN3D",
 
-    version: "Ch-2 Update 5",
+    version: "Ch2 Up6",
 
     engine: "Renpy",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "20-09-2026",
+    released: "25-10-2026",
 
-    updated: "20-09-2026",
+    updated: "25-10-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/forbiddenthuoghts",
 
@@ -72,11 +72,11 @@ window.game = {
 
     
     download: {
-    paid: false,
+    paid: true,
     free: true,
 
-    paidLink: "",
-    freeLink: "https://move2link.co/4e1caeb"
+    paidLink: "https://move2link.co/4e1caeb",
+    freeLink: "https://move2link.co/5c819d6"
 },
 
 };

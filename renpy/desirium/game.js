@@ -13,7 +13,7 @@ window.game = {
     engine: "Renpy'Py",
     
     status: "Ongoing",
-    badge: "New",
+    badge: "",
 
     released: "25-09-2026",
 
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: true,
+    featured: false,
     
     folder: "renpy/desirium",
 
