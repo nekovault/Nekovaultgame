@@ -10,7 +10,7 @@
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">\n    <link rel="stylesheet" href="catalog-menu.css">
 
     <title>Catalog - NekoVault</title>
 
@@ -27,6 +27,12 @@
 
     <div class="header-right">
 
+        <button class="notification-btn" id="notificationBtn" type="button"
+            aria-label="Buka notifikasi" aria-expanded="false" aria-controls="notificationPanel">
+            <i class="ri-notification-3-line" aria-hidden="true"></i>
+            <span class="notification-unread-dot" id="notificationUnreadDot" hidden></span>
+        </button>
+
         <button class="icon-btn" id="menuBtn">
 
           <span class="menu-icon">
@@ -41,6 +47,17 @@
 
 </header>
     
+<!-- PANEL NOTIFIKASI -->
+<div class="notification-panel" id="notificationPanel" hidden>
+    <div class="notification-panel-header">
+        <h2>Notifikasi</h2>
+        <button type="button" class="notification-mark-all" id="notificationMarkAll">Tandai dibaca</button>
+    </div>
+    <div class="notification-list" id="notificationList" aria-live="polite">
+        <p class="notification-empty">Memuat notifikasi...</p>
+    </div>
+</div>
+
     <!-- MENU PANEL -->
 <div class="menu-panel" id="menuPanel">
 
@@ -59,15 +76,30 @@
     <div class="search-results" id="searchResults">
     </div>
 
-    <div class="menu-item">
+    <button class="menu-item menu-accordion" id="genresToggle" type="button"
+        aria-expanded="false" aria-controls="genresPanel">
         <span>Genres</span>
         <i class="ri-arrow-down-s-line"></i>
-    </div>
+    </button>
+    <section class="menu-filter-panel" id="genresPanel" hidden>
+        <h3 class="menu-filter-heading">🏷️ GENRE <span id="genreCount">• 0</span></h3>
+        <div class="genre-tags" id="genreTags"></div>
+        <button class="menu-reset-filter" id="clearGenreFilter" type="button">Semua genre</button>
+    </section>
 
-    <div class="menu-item">
+    <button class="menu-item menu-accordion" id="enginesToggle" type="button"
+        aria-expanded="false" aria-controls="enginesPanel">
         <span>Engines</span>
         <i class="ri-arrow-down-s-line"></i>
-    </div>
+    </button>
+    <section class="menu-filter-panel engine-panel" id="enginesPanel" hidden>
+        <div class="engine-options" id="engineOptions">
+            <button type="button" data-engine="Ren'Py">Ren'Py</button>
+            <button type="button" data-engine="RPG Maker">RPGM</button>
+            <button type="button" data-engine="Unity">Unity</button>
+        </div>
+        <button class="menu-reset-filter" id="clearEngineFilter" type="button">Semua engine</button>
+    </section>
 
 </div>
 
@@ -156,6 +188,7 @@
 </nav>
 
     <script src="game.js"></script>
+    <script src="notifications.js"></script>
     <script src="script.js"></script>
     <script src="catalog.js"></script>
     <script src="search.js"></script>

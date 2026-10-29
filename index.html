@@ -42,6 +42,12 @@
 
     <div class="header-right">
 
+        <button class="notification-btn" id="notificationBtn" type="button"
+            aria-label="Buka notifikasi" aria-expanded="false" aria-controls="notificationPanel">
+            <i class="ri-notification-3-line" aria-hidden="true"></i>
+            <span class="notification-unread-dot" id="notificationUnreadDot" hidden></span>
+        </button>
+
         <button class="icon-btn" id="menuBtn">
 
           <span class="menu-icon">
@@ -56,6 +62,17 @@
 
 </header>
     
+<!-- PANEL NOTIFIKASI -->
+<div class="notification-panel" id="notificationPanel" hidden>
+    <div class="notification-panel-header">
+        <h2>Notifikasi</h2>
+        <button type="button" class="notification-mark-all" id="notificationMarkAll">Tandai dibaca</button>
+    </div>
+    <div class="notification-list" id="notificationList" aria-live="polite">
+        <p class="notification-empty">Memuat notifikasi...</p>
+    </div>
+</div>
+
     <!-- MENU PANEL -->
 <div class="menu-panel" id="menuPanel">
 
@@ -170,6 +187,7 @@
 </nav>
      
     <script src="game.js"></script>
+    <script src="notifications.js"></script>
     <script src="script.js"></script>
     
 

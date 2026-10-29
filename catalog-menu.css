@@ -1,0 +1,131 @@
+/* Tambahan khusus panel Genres dan Engines di catalog.html.
+   Tidak mengubah layout halaman utama atau halaman download. */
+
+.menu-accordion {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #29232f;
+    background: transparent;
+    font: inherit;
+    text-align: left;
+}
+
+.menu-accordion i {
+    transition: transform .2s ease;
+}
+
+.menu-accordion.expanded i {
+    transform: rotate(180deg);
+}
+
+.menu-filter-panel {
+    padding: 16px 0 18px;
+    border-bottom: 1px solid #29232f;
+}
+
+.menu-filter-panel[hidden] {
+    display: none !important;
+}
+
+.menu-filter-heading {
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(168, 85, 247, .4);
+    color: #f5f3ff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: .4px;
+}
+
+.menu-filter-heading span {
+    color: #c084fc;
+}
+
+.genre-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.genre-tag {
+    max-width: 100%;
+    padding: 9px 13px;
+    border: 1px solid #6d4b82;
+    border-radius: 999px;
+    background: #130c1d;
+    color: #d8a5ff;
+    font-size: 14px;
+    line-height: 1.25;
+    text-align: left;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.genre-tag:hover,
+.genre-tag.active {
+    border-color: #c084fc;
+    background: rgba(168, 85, 247, .22);
+    color: #fff;
+    box-shadow: 0 0 8px rgba(168, 85, 247, .18);
+}
+
+.engine-options {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.engine-options button,
+.menu-reset-filter {
+    width: 100%;
+    padding: 12px 10px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: #aebbd0;
+    font: inherit;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.engine-options button:hover,
+.engine-options button.active {
+    background: rgba(0, 191, 255, .09);
+    color: #e6f7ff;
+}
+
+.menu-reset-filter {
+    margin-top: 8px;
+    color: #00bfff;
+    font-size: 14px;
+}
+
+.menu-reset-filter:hover {
+    color: #80ddff;
+}
+
+.search-results {
+    display: grid;
+    gap: 8px;
+    max-height: 260px;
+    overflow-y: auto;
+}
+
+.search-empty {
+    padding: 12px 2px;
+    color: #aebbd0;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .genre-tag {
+        padding: 8px 11px;
+        font-size: 13px;
+    }
+
+    .menu-filter-heading {
+        font-size: 16px;
+    }
+}

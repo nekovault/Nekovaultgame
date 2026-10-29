@@ -350,3 +350,165 @@ function toggleGuide(button) {
     guideItem.classList.toggle("open");
 
 }
+
+// =========================
+// NOTIFIKASI GAME BARU
+// Data notifikasi diambil dari notifications.js agar game lama tidak ikut muncul.
+// =========================
+(() => {
+    const notificationBtn = document.getElementById("notificationBtn");
+    const notificationPanel = document.getElementById("notificationPanel");
+    const notificationList = document.getElementById("notificationList");
+    const unreadDot = document.getElementById("notificationUnreadDot");
+    const markAllBtn = document.getElementById("notificationMarkAll");
+    if (!notificationBtn || !notificationPanel || !notificationList) return;
+
+    const readStorageKey = "nekovault_read_new_game_notifications_v2";
+
+    function getReadIds() {
+        try {
+            const value = JSON.parse(localStorage.getItem(readStorageKey) || "[]");
+            return new Set(Array.isArray(value) ? value : []);
+        } catch {
+            return new Set();
+        }
+    }
+
+    function saveReadIds(ids) {
+        try {
+            localStorage.setItem(readStorageKey, JSON.stringify([...ids]));
+        } catch (error) {
+            console.warn("Status notifikasi tidak dapat disimpan.", error);
+        }
+    }
+
+    function relativeTime(date) {
+        const seconds = Math.max(0, Math.floor((Date.now() - date.getTime()) / 1000));
+        if (seconds < 60) return "Baru saja";
+        const minutes = Math.floor(seconds / 60);
+        if (minutes < 60) return `${minutes} menit yang lalu`;
+        const hours = Math.floor(minutes / 60);
+        if (hours < 24) return `${hours} jam yang lalu`;
+        const days = Math.floor(hours / 24);
+        if (days < 7) return `${days} hari yang lalu`;
+        const weeks = Math.floor(days / 7);
+        if (weeks < 5) return `${weeks} minggu yang lalu`;
+        const months = Math.floor(days / 30);
+        if (months < 12) return `${Math.max(1, months)} bulan yang lalu`;
+        return `${Math.max(1, Math.floor(days / 365))} tahun yang lalu`;
+    }
+
+    function getNewGameNotifications() {
+        const data = Array.isArray(window.NEKO_NOTIFICATIONS)
+            ? window.NEKO_NOTIFICATIONS
+            : [];
+
+        return data
+            .filter(item => item && item.id && item.title && item.folder && item.publishedAt)
+            .map(item => ({ ...item, publishedDate: new Date(item.publishedAt) }))
+            .filter(item => !Number.isNaN(item.publishedDate.getTime()))
+            .sort((a, b) => b.publishedDate - a.publishedDate);
+    }
+
+    function renderNotifications() {
+        const notifications = getNewGameNotifications();
+        const readIds = getReadIds();
+        unreadDot.hidden = !notifications.some(item => !readIds.has(item.id));
+        notificationList.replaceChildren();
+
+        if (!notifications.length) {
+            const empty = document.createElement("p");
+            empty.className = "notification-empty";
+            empty.textContent = "Belum ada notifikasi game baru.";
+            notificationList.appendChild(empty);
+            return;
+        }
+
+        notifications.forEach(item => {
+            const isUnread = !readIds.has(item.id);
+            const link = document.createElement("a");
+            link.className = `notification-item${isUnread ? " unread" : ""}`;
+            link.href = `game.html?game=${encodeURIComponent(item.folder)}`;
+
+            // Banner 16:9 diambil dari folder game: <folder>/img/banner.jpg
+            const image = document.createElement("img");
+            image.className = "notification-item-image";
+            const cleanFolder = String(item.folder).replace(/^\/+|\/+$/g, "");
+            image.src = `${cleanFolder}/img/banner.jpg`;
+            image.alt = `${item.title} banner`;
+            image.loading = "lazy";
+            image.onerror = () => {
+                image.hidden = true;
+                link.classList.add("notification-item-no-image");
+            };
+
+            const content = document.createElement("span");
+            content.className = "notification-item-content";
+
+            const title = document.createElement("span");
+            title.className = "notification-item-title";
+            title.textContent = "New Upload 🔥";
+
+            const subtitle = document.createElement("span");
+            subtitle.className = "notification-item-subtitle";
+            subtitle.textContent = item.title;
+
+            const time = document.createElement("span");
+            time.className = "notification-item-time";
+            time.textContent = relativeTime(item.publishedDate);
+
+            const dot = document.createElement("span");
+            dot.className = "notification-item-dot";
+            dot.setAttribute("aria-hidden", "true");
+
+            content.append(title, subtitle, time);
+            link.append(image, content, dot);
+            link.addEventListener("click", () => {
+                const ids = getReadIds();
+                ids.add(item.id);
+                saveReadIds(ids);
+            });
+            notificationList.appendChild(link);
+        });
+    }
+
+    function closePanel() {
+        notificationPanel.hidden = true;
+        notificationBtn.classList.remove("active");
+        notificationBtn.setAttribute("aria-expanded", "false");
+    }
+
+    notificationBtn.addEventListener("click", () => {
+        if (!notificationPanel.hidden) {
+            closePanel();
+            return;
+        }
+        notificationPanel.hidden = false;
+        notificationBtn.classList.add("active");
+        notificationBtn.setAttribute("aria-expanded", "true");
+        renderNotifications();
+    });
+
+    markAllBtn?.addEventListener("click", () => {
+        const ids = getReadIds();
+        getNewGameNotifications().forEach(item => ids.add(item.id));
+        saveReadIds(ids);
+        renderNotifications();
+    });
+
+    document.addEventListener("click", event => {
+        if (!notificationPanel.hidden &&
+            !notificationPanel.contains(event.target) &&
+            !notificationBtn.contains(event.target)) {
+            closePanel();
+        }
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closePanel();
+    });
+
+    window.setInterval(() => {
+        if (!notificationPanel.hidden) renderNotifications();
+    }, 60000);
+})();

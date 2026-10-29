@@ -36,11 +36,19 @@ if (searchInput && resultBox) {
 
         // Cari game
         const results =
-            games.filter(game =>
-                game.title
-                .toLowerCase()
-                .includes(keyword)
-            );
+            games.filter(game => {
+                const title = String(game.title || "").toLowerCase();
+                const engine = String(game.engine || "").toLowerCase();
+                const rawGenres = game.genres ?? game.genre ?? [];
+                const genres = (Array.isArray(rawGenres) ? rawGenres : String(rawGenres).split(","))
+                    .map(item => String(item).trim().toLowerCase())
+                    .join(" ");
+
+                return title.includes(keyword) ||
+                    engine.includes(keyword) ||
+                    (engine.includes("rpg maker") && "rpgm".includes(keyword)) ||
+                    genres.includes(keyword);
+            });
 
 
         // Tidak ditemukan
