@@ -103,8 +103,15 @@
 
     let registration;
     try {
-      registration = await navigator.serviceWorker.register("/sw.js", { scope: "/" });
-      await navigator.serviceWorker.ready;
+      await navigator.serviceWorker.register("/sw.js", { scope: "/" });
+
+      // Gunakan registration yang sudah aktif, bukan objek hasil register
+      // yang mungkin masih berada pada tahap installing/waiting.
+      registration = await navigator.serviceWorker.ready;
+
+      if (!registration || !registration.active) {
+        throw new Error("Service Worker belum aktif. Muat ulang halaman lalu coba lagi.");
+      }
     } catch (error) {
       console.error("NekoVault service worker:", error);
       setUI(ui, "Service Worker gagal diaktifkan. Muat ulang halaman atau periksa file /sw.js.", false);
@@ -154,6 +161,12 @@
             setUI(ui, "Izin notifikasi belum diberikan.", false);
           }
           return;
+        }
+
+        // Ambil ulang registration aktif tepat sebelum subscribe.
+        registration = await navigator.serviceWorker.ready;
+        if (!registration.active) {
+          throw new Error("Service Worker belum aktif. Muat ulang halaman lalu coba lagi.");
         }
 
         const subscription = await registration.pushManager.subscribe({
