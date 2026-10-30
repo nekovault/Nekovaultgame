@@ -18,6 +18,11 @@
 
 window.NEKO_NOTIFICATIONS = [
     {
+       id: "test-push-001",
+       title: "TEST PUSH NekoVault",
+       publishedAt: "2026-10-30T15:00:00+08:00"
+    },
+    {
         id: "update-2026-10-29-ethereal-threads",
         title: "Ethereal Threads",
         folder: "renpy/etherealthreads/",
