@@ -1,0 +1,116 @@
+name: NekoVault Push Notification
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - notifications.js
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect new games and send notification
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          PUSH_ADMIN_TOKEN: ${{ secrets.PUSH_ADMIN_TOKEN }}
+        run: |
+          node <<'NODE'
+          const fs = require("fs");
+          const vm = require("vm");
+          const { execFileSync } = require("child_process");
+
+          function loadGames(source) {
+            const context = { window: {} };
+            vm.runInNewContext(source, context);
+            return context.window.NEKO_NOTIFICATIONS || [];
+          }
+
+          const before = process.env.BEFORE_SHA;
+
+          if (!before || /^0+$/.test(before)) {
+            console.log("No previous commit. Skipping.");
+            process.exit(0);
+          }
+
+          const oldSource = execFileSync(
+            "git",
+            ["show", `${before}:notifications.js`],
+            { encoding: "utf8" }
+          );
+
+          const newSource = fs.readFileSync(
+            "notifications.js",
+            "utf8"
+          );
+
+          const oldGames = loadGames(oldSource);
+          const newGames = loadGames(newSource);
+
+          const oldIds = new Set(oldGames.map(game => game.id));
+
+          const added = newGames.filter(
+            game => game.id && !oldIds.has(game.id)
+          );
+
+          if (added.length === 0) {
+            console.log("No new games detected.");
+            process.exit(0);
+          }
+
+          const count = added.length;
+          const title = `🎮 ${count} Game Baru Telah Ditambahkan!`;
+
+          const gameTitles = added
+            .map(game => `• ${game.title}`)
+            .join("\n");
+
+          const body =
+            `Ada ${count} game baru yang sudah tersedia di NekoVault! 🎉\n\n` +
+            `${gameTitles}\n\n` +
+            `Selamat bermain! 🎉`;
+
+          async function sendNotification() {
+            const response = await fetch(
+              `${process.env.SUPABASE_URL}/functions/v1/send-game-notification`,
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "Authorization": `Bearer ${process.env.PUSH_ADMIN_TOKEN}`
+                },
+                body: JSON.stringify({
+                  title,
+                  body,
+                  url: "https://nekovaultgame.pages.dev/"
+                })
+              }
+            );
+
+            const result = await response.text();
+
+            console.log("Supabase response:", result);
+
+            if (!response.ok) {
+              throw new Error(
+                `Notification failed: HTTP ${response.status}`
+              );
+            }
+          }
+
+          sendNotification().catch(error => {
+            console.error(error);
+            process.exit(1);
+          });
+          NODE
