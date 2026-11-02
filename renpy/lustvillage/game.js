@@ -65,7 +65,7 @@ window.game = {
     // TAG
     // =========================
 
-    genres: "3dcg, ahegao, animated, big ass, big tits, cheating, corruption, footjob, groping, incest, male protagonist, management, masturbation, milf, mind control, mobile game, oral sex, point & click, sandbox, spanking, teasing, titfuck, urination, vaginal, sex, voyeurism",
+    genres: "3DCGI, Ahegao, Animated, Big Ass, Big Tits, Cheating, Corruption, Footjob, Groping, Incest, Male Protagonist, Management, Masturbation, Milf, Mind Control, Mobile Game, Oral Sex, Point & Click, Sandbox, Spanking, Teasing, Titfuck, Urination, Vaginal Sex, Voyeurism",
     
     synopsis: "Kamu berperan sebagai James (nama dapat diubah) dalam permainan ini; di masa lalu, kamu diintimidasi dan dianggap sebagai pecundang, dan orang tuamu meninggalkanmu setelah perceraian mereka.\nKetika kamu kembali setelah lima tahun, kamu telah mengalami perubahan signifikan dan bukan lagi pecundang. Akankah kamu mengikuti jalan cinta atau merusak keluargamu?\nKeputusan ada di tanganmu, mulailah sekarang juga!",
 

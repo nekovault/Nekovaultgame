@@ -18,6 +18,18 @@
 
 window.NEKO_NOTIFICATIONS = [
     {
+        id: "update-2026-11-02-double-perception",
+        title: "Double Perception",
+        folder: "renpy/double perception/",
+        publishedAt: "2026-11-02T14:30:00:00+08:00"
+    },
+    {
+        id: "update-2026-11-02-whisper-of-desire",
+        title: "Whispers of Desire: Misaki's Path",
+        folder: "renpy/whisperofdesire/",
+        publishedAt: "2026-11-02T14:30:00:00+08:00"
+    },
+    {
         id: "update-2026-10-29-ethereal-threads",
         title: "Ethereal Threads",
         folder: "renpy/etherealthreads/",

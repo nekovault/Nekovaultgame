@@ -8,16 +8,16 @@ window.game = {
 
     developer: "Regoldy",
 
-    version: "0.2.2",
+    version: "0.2.4",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "31-08-2026",
+    released: "08-10-2026",
 
-    updated: "31-08-2026",
+    updated: "26-10-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/whisperofdesire",
 
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "https://move2link.co/d21c509",
-    freeLink: "https://sfl.gl/vHb9U"
+    freeLink: "https://move2link.co/34af88a"
 },
 
 };

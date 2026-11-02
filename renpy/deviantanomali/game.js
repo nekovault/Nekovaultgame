@@ -65,7 +65,7 @@ window.game = {
     // TAG
     // =========================
 
-    genres: "3DCGI, Anal Sex, Big Tits Male Protagonist, Masturbation, Milf, Mobile Game, Point & Click, Rpg, Sandbox, Sex Toys, Spanking, Vaginal Sex",
+    genres: "3DCGI, Anal Sex, Big Tits, Male Protagonist, Masturbation, Milf, Mobile Game, Point & Click, RPG, Sandbox, Sex Toys, Spanking, Vaginal Sex",
     
     synopsis: "Badai salju misterius menyelimuti kota dan mengubah hidupmu selamanya. Sejak badai salju aneh itu, laporan tentang kejadian supernatural mulai bermunculan dan tingkat kejahatan meningkat secara eksponensial. Netherhelm berada dalam kekacauan. KAMU, baru lulus kuliah dan berbekal gelar bergengsi di bidang Psikologi Kriminal, memutuskan untuk bergabung dengan penegak hukum sebagai detektif pemula.\nDengan obsesi yang mendalam untuk mengungkap misteri badai salju, kamu memecahkan kasus demi kasus saat kamu menapaki jalan takdir menuju tujuan akhirmu.",
 

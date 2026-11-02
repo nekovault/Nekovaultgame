@@ -65,7 +65,7 @@ window.game = {
     // TAG
     // =========================
 
-    genres: "3dcg, anal sex, animated, big ass, big tits blackmail, cheating, drugs, handjob, incest, lesbian, male protagonist, masturbation, mobile game, oral sex, rape, rpg, sandbox, school setting, sleep sex, spanking, swinging, titfuck, turn based, combat, vaginal sex, voyeurism",
+    genres: "3DCGI, Anal Sex, Animated, Big Ass, Big Tits, Blackmail, Cheating, Drugs, Handjob, Incest, Lesbian, Male Protagonist, Masturbation, Mobile Game, Oral Sex, Rape, RPG, Sandbox, School Setting, Sleep Sex, Spanking, Swinging, Titfuck, Turn Based, Combat, Vaginal Sex, Voyeurism",
     
     synopsis: "Akhirnya tiba hari di mana tokoh utama kita lulus dari sekolah menengah atas. Sekarang saatnya dia melangkah ke masa dewasa dan kuliah, dan untuk itu dia perlu pindah ke rumah sepupunya yang dulu gemuk dan jelek (yang belum pernah dia temui sejak masa kecilnya) di kota besar. Inilah saatnya untuk mengambil kesempatan terjun ke kehidupan mahasiswa yang penuh semangat dan kenakalan.",
 

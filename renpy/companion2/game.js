@@ -65,7 +65,7 @@ window.game = {
     // TAG
     // =========================
 
-    genres: "3DCG, Male protagonist, Animated, Mobile game, Ahegao, Exhibitionism, Female domination, Handjob, Harem, Lesbian, Masturbation, Oral sex, Teasing, Romance, Voyeurism, Big tits, Big ass, Dating sim, Contemporary fantasy, Interracial, Humor, Graphic violence, Paranormal, POV, Superpowers, Twins, Creampie, Footjob, Virgin, Vaginal sex, Monster Girl, Group sex, Multiple Penetration(MC+Toy), Sex toys, Anal sex, Pregnancy",
+    genres: "3DCG, Male protagonist, Animated, Mobile game, Ahegao, Exhibitionism, Female Domination, Handjob, Harem, Lesbian, Masturbation, Oral sex, Teasing, Romance, Voyeurism, Big Tits, Big ass, Dating sim, Contemporary fantasy, Interracial, Humor, Graphic violence, Paranormal, POV, Superpowers, Twins, Creampie, Footjob, Virgin, Vaginal sex, Monster Girl, Group sex, Multiple Penetration, Sex toys, Anal sex, Pregnancy",
     
     synopsis: "Tiga tahun setelah kejadian tragis, Anda kembali ke kampung halaman. Tepat sebelum mencapai tujuan, Anda menyaksikan dua kekuatan supernatural saling mengadu kekuatan dalam pertarungan sampai mati.\nTampaknya Anda telah ditemukan dan dengan mudah dikalahkan, tetapi alih-alih mati, Anda terbangun di tempat tidur seolah-olah tidak terjadi apa-apa.\nApakah itu semua hanya mimpi?\nKehidupan sehari-hari terus berjalan, suka atau tidak suka. Anda tidak hanya merasa seperti orang asing di kampung halaman, tetapi semakin banyak kejadian yang tidak dapat dijelaskan terjadi di sekitar Anda.\nKetika orang-orang yang Anda sayangi terancam, Anda harus memutuskan batasan mana yang bersedia Anda langgar. Dan, apakah layak untuk mengorbankan kemanusiaan.",
 

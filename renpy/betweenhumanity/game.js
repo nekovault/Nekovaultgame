@@ -65,7 +65,7 @@ window.game = {
     // TAG
     // =========================
 
-    genres: "3DCGI, Ahegao, Animated, Big Ass, Big Tits Creampie, Handjob, Harem, Lesbian, Male Protagonist, Masturbation, Milf, Mobile Game, Monster Girl, Oral Sex, POV, Romance, Teasing, Titfuck, Twins, Vaginal Sex, Virgin, Voyeurism",
+    genres: "3DCGI, Ahegao, Animated, Big Ass, Big Tits, Creampie, Handjob, Harem, Lesbian, Male Protagonist, Masturbation, Milf, Mobile Game, Monster Girl, Oral Sex, POV, Romance, Teasing, Titfuck, Twins, Vaginal Sex, Virgin, Voyeurism",
     
     synopsis: "Between Humanity membawa Anda dalam perjalanan ke masa depan potensial yang berbatasan dengan distopia. Tetapkan hanya lima tahun ke depan, Anda, sebagai protagonis, hanyalah seorang siswa biasa sampai suatu hari Anda menemukan diri Anda bangun di ruang rumah sakit.\n\nSemua ingatan mengapa Anda berakhir di sana kabur di kedalaman pikiran Anda. Tetapi begitu Anda mencoba untuk kembali ke kehidupan sehari-hari Anda, Anda menyadari bahwa sesuatu secara fundamental berbeda. Anda diundang untuk tinggal di rumah sahabat Anda, di mana Anda juga akan berbagi ruang dengan ibu dan saudara perempuannya, yang masing-masing memiliki masalah masalah dan perjuangan sehari-hari. Apa yang mungkin salah dengan itu?\n\nDengan setiap keputusan yang Anda buat, Anda tidak hanya mengubah hidup Anda sendiri tetapi juga dari teman dan orang yang Anda cintai. Ada di tangan Anda yang ingin Anda mainkan.",
 

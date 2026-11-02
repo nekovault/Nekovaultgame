@@ -65,7 +65,7 @@ window.game = {
     // TAG
     // =========================
 
-    genres: "3dcg, animated, big ass, big tits fantasy, graphic violence, groping, harem, horror, male protagonist, masturbation, milf, mobile game, monster girl, paranormal, prostitution, religion, romance, sandbox",
+    genres: "3DCGI, Animated, Big Ass, Big Tits, Fantasy, Graphic Violence, Groping, Harem, Horror, Male Protagonist, Masturbation, Milf, Mobile Game, Monster Girl, Paranormal, Prostitution, Religion, Romance, Sandbox",
     
     synopsis: "Kau adalah detektif santai yang udah dua tahun terakhir ini cuma jalanin kasus asal-asalan, sejak kehilangan partnermu. Yang awalnya cuma investigasi rutin soal serangkaian pembunuhan sadis di kampus, ternyata dengan cepat berubah jadi sesuatu yang jauh lebih gelap dari yang pernah kau bayangkan. Kau terbangun suatu malam dengan tanda iblis yang terbakar di lehermu. Hantu yang selama ini tinggal di apartemenmu, yang udah jadi bagian dari rutinitas harianmu, ternyata mungkin nggak sepolos atau selemah yang keliatan. Sebelum kau sempat mencerna semua yang terjadi, sekarang kau terjebak di antara memecahkan pembunuhan di masa sekarang dan menghadapi kekuatan dari zaman yang bahkan nggak pernah kau tahu ada. Setiap orang yang kau temui bisa jadi menyembunyikan sesuatu. Setiap hubungan yang kau bangun bisa jadi bagian dari rencana yang lebih besar.",
 

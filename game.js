@@ -3,6 +3,8 @@
 // =========================
 
 const gameList = [
+    "renpy/doubleperception/game.js",
+    "renpy/whisperofdesire/game.js",
     "renpy/etherealthreads/game.js",
     "renpy/betweenhumanity/game.js",
     "renpy/succubuskingdom/game.js",
@@ -49,7 +51,6 @@ const gameList = [
     "renpy/correctional/game.js",
     "renpy/isekaiparadise/game.js",
     "renpy/worldofsecret/game.js",
-    "renpy/whisperofdesire/game.js",
     "renpy/spyxtaxi/game.js",
     "renpy/drivenby/game.js",
     "renpy/devotedwife/game.js",
