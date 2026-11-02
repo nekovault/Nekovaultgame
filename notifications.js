@@ -20,7 +20,7 @@ window.NEKO_NOTIFICATIONS = [
     {
         id: "update-2026-11-02-double-perception",
         title: "Double Perception",
-        folder: "renpy/double perception/",
+        folder: "renpy/doubleperception/",
         publishedAt: "2026-11-02T14:30:00+08:00"
     },
     {
