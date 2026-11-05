@@ -20,54 +20,57 @@
 
 window.NEKO_NOTIFICATIONS = [
     {
-    id: "update-2026-11-05-echoes-the-lies-we-tell-ourselves",
-    title: "Echoes: The Lies We Tell Ourselves",
-    folder: "renpy/echoes/"
-},
-{
-    id: "update-2026-11-05-fate-wont-separate-us",
-    title: "Fate Won't Separate Us",
-    folder: "renpy/fatwonseparate/"
-},
-{
-    id: "update-2026-11-05-shadows-of-absence",
-    title: "Shadows Of Absence",
-    folder: "renpy/shadowofabsence/"
-},
-    {
-        id: "update-2026-11-02-double-perception",
-        title: "Double Perception",
-        folder: "renpy/doubleperception/",
-        publishedAt: "2026-11-02T14:30:00+08:00"
+        "id": "update-2026-11-05-echoes-the-lies-we-tell-ourselves",
+        "title": "Echoes: The Lies We Tell Ourselves",
+        "folder": "renpy/echoes/",
+        "publishedAt": "2026-11-05T14:16:30.000+08:00"
     },
     {
-        id: "update-2026-11-02-whisper-of-desire",
-        title: "Whispers of Desire: Misaki's Path",
-        folder: "renpy/whisperofdesire/",
-        publishedAt: "2026-11-02T14:30:00+08:00"
+        "id": "update-2026-11-05-fate-wont-separate-us",
+        "title": "Fate Won't Separate Us",
+        "folder": "renpy/fatwonseparate/",
+        "publishedAt": "2026-11-05T14:16:30.000+08:00"
     },
     {
-        id: "update-2026-10-29-ethereal-threads",
-        title: "Ethereal Threads",
-        folder: "renpy/etherealthreads/",
-        publishedAt: "2026-10-29T15:00:00+08:00"
+        "id": "update-2026-11-05-shadows-of-absence",
+        "title": "Shadows Of Absence",
+        "folder": "renpy/shadowofabsence/",
+        "publishedAt": "2026-11-05T14:16:30.000+08:00"
     },
     {
-        id: "update-2026-10-29-between-humanity",
-        title: "Between Humanity",
-        folder: "renpy/betweenhumanity/",
-        publishedAt: "2026-10-29T15:00:00+08:00"
+        "id": "update-2026-11-02-double-perception",
+        "title": "Double Perception",
+        "folder": "renpy/doubleperception/",
+        "publishedAt": "2026-11-02T14:30:00+08:00"
     },
     {
-        id: "update-2026-10-29-succubus-kingdom",
-        title: "Succubus Kingdom",
-        folder: "renpy/succubuskingdom/",
-        publishedAt: "2026-10-29T15:00:00+08:00"
+        "id": "update-2026-11-02-whisper-of-desire",
+        "title": "Whispers of Desire: Misaki's Path",
+        "folder": "renpy/whisperofdesire/",
+        "publishedAt": "2026-11-02T14:30:00+08:00"
     },
     {
-        id: "update-2026-10-29-forbidden-thoughts",
-        title: "Forbidden Thoughts",
-        folder: "renpy/forbiddenthoughts/",
-        publishedAt: "2026-10-29T15:00:00+08:00"
+        "id": "update-2026-10-29-ethereal-threads",
+        "title": "Ethereal Threads",
+        "folder": "renpy/etherealthreads/",
+        "publishedAt": "2026-10-29T15:00:00+08:00"
+    },
+    {
+        "id": "update-2026-10-29-between-humanity",
+        "title": "Between Humanity",
+        "folder": "renpy/betweenhumanity/",
+        "publishedAt": "2026-10-29T15:00:00+08:00"
+    },
+    {
+        "id": "update-2026-10-29-succubus-kingdom",
+        "title": "Succubus Kingdom",
+        "folder": "renpy/succubuskingdom/",
+        "publishedAt": "2026-10-29T15:00:00+08:00"
+    },
+    {
+        "id": "update-2026-10-29-forbidden-thoughts",
+        "title": "Forbidden Thoughts",
+        "folder": "renpy/forbiddenthoughts/",
+        "publishedAt": "2026-10-29T15:00:00+08:00"
     }
 ];
