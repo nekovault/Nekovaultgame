@@ -4,20 +4,20 @@ window.game = {
     // INFORMASI DASAR
     // =========================
 
-    title: "Echoes",
+    title: "Echoes: The Lies We Tell Ourselves",
 
     developer: "OldCats",
 
-    version: "0.4",
+    version: "0.5",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "30-08-2026",
+    released: "25-10-2026",
 
-    updated: "31-09-2026",
+    updated: "04-11-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/echoes",
 
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
 
-    size: "1.2 GB / 4.2 GB",
+    size: "1.5 GB / 4.6 GB",
     
     linux: false,
 

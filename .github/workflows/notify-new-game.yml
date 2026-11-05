@@ -8,7 +8,12 @@ on:
       - notifications.js
 
 permissions:
-  contents: read
+  contents: write
+
+# Hindari dua proses publikasi berjalan bersamaan.
+concurrency:
+  group: nekovault-game-publish
+  cancel-in-progress: false
 
 jobs:
   notify:
@@ -20,16 +25,118 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Detect new games and send notification
+      - name: Detect new games and save WITA publication time
+        id: prepare
         env:
           BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          node <<'NODE'
+          const fs = require("fs");
+          const vm = require("vm");
+          const { execFileSync } = require("child_process");
+
+          const outputFile = process.env.GITHUB_OUTPUT;
+
+          function setOutput(name, value) {
+            fs.appendFileSync(outputFile, `${name}=${value}\n`);
+          }
+
+          function loadGames(source) {
+            const context = { window: {} };
+            vm.runInNewContext(source, context);
+            const games = context.window.NEKO_NOTIFICATIONS;
+            if (!Array.isArray(games)) {
+              throw new Error("window.NEKO_NOTIFICATIONS bukan array yang valid.");
+            }
+            return games;
+          }
+
+          const before = process.env.BEFORE_SHA;
+          if (!before || /^0+$/.test(before)) {
+            console.log("Tidak ada commit sebelumnya; tidak ada publikasi yang diproses.");
+            setOutput("has_new_games", "false");
+            process.exit(0);
+          }
+
+          const oldSource = execFileSync(
+            "git", ["show", `${before}:notifications.js`], { encoding: "utf8" }
+          );
+          const source = fs.readFileSync("notifications.js", "utf8");
+          const oldGames = loadGames(oldSource);
+          const newGames = loadGames(source);
+          const oldIds = new Set(oldGames.map(game => game.id).filter(Boolean));
+          const added = newGames.filter(game => game.id && !oldIds.has(game.id));
+
+          if (added.length === 0) {
+            console.log("Tidak ada ID game baru. Tidak mengirim notifikasi.");
+            setOutput("has_new_games", "false");
+            process.exit(0);
+          }
+
+          // Gunakan waktu commit publikasi, lalu konversi UTC ke WITA (+08:00).
+          const commitTime = execFileSync(
+            "git", ["show", "-s", "--format=%cI", process.env.CURRENT_SHA],
+            { encoding: "utf8" }
+          ).trim();
+          const parsedTime = new Date(commitTime);
+          if (Number.isNaN(parsedTime.getTime())) {
+            throw new Error(`Waktu commit tidak valid: ${commitTime}`);
+          }
+          const witaTime = new Date(parsedTime.getTime() + 8 * 60 * 60 * 1000)
+            .toISOString()
+            .replace("Z", "+08:00");
+
+          const addedIds = new Set(added.map(game => game.id));
+          for (const game of newGames) {
+            if (addedIds.has(game.id)) {
+              // Timestamp otomatis menggantikan waktu manual pada game yang baru ditambahkan.
+              game.publishedAt = witaTime;
+            }
+          }
+
+          const assignment = /window\.NEKO_NOTIFICATIONS\s*=\s*\[[\s\S]*?\]\s*;/;
+          if (!assignment.test(source)) {
+            throw new Error("Deklarasi window.NEKO_NOTIFICATIONS tidak ditemukan.");
+          }
+
+          const updatedSource = source.replace(
+            assignment,
+            `window.NEKO_NOTIFICATIONS = ${JSON.stringify(newGames, null, 4)};`
+          );
+          fs.writeFileSync("notifications.js", updatedSource, "utf8");
+
+          fs.writeFileSync("new-game-ids.json", JSON.stringify([...addedIds]), "utf8");
+          setOutput("has_new_games", "true");
+          console.log(`${added.length} game baru ditemukan.`);
+          console.log(`Timestamp WITA: ${witaTime}`);
+          console.log(added.map(game => `- ${game.title}`).join("\n"));
+          NODE
+
+      - name: Commit automatic publication timestamps
+        if: steps.prepare.outputs.has_new_games == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add notifications.js
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan timestamp untuk disimpan."
+            exit 0
+          fi
+          git commit -m "chore: save automatic game publication timestamps"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+
+      - name: Send push notification
+        if: steps.prepare.outputs.has_new_games == 'true'
+        env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           PUSH_ADMIN_TOKEN: ${{ secrets.PUSH_ADMIN_TOKEN }}
         run: |
           node <<'NODE'
           const fs = require("fs");
           const vm = require("vm");
-          const { execFileSync } = require("child_process");
 
           function loadGames(source) {
             const context = { window: {} };
@@ -37,51 +144,24 @@ jobs:
             return context.window.NEKO_NOTIFICATIONS || [];
           }
 
-          const before = process.env.BEFORE_SHA;
-
-          if (!before || /^0+$/.test(before)) {
-            console.log("No previous commit. Skipping.");
-            process.exit(0);
-          }
-
-          const oldSource = execFileSync(
-            "git",
-            ["show", `${before}:notifications.js`],
-            { encoding: "utf8" }
-          );
-
-          const newSource = fs.readFileSync(
-            "notifications.js",
-            "utf8"
-          );
-
-          const oldGames = loadGames(oldSource);
-          const newGames = loadGames(newSource);
-
-          const oldIds = new Set(oldGames.map(game => game.id));
-
-          const added = newGames.filter(
-            game => game.id && !oldIds.has(game.id)
-          );
-
+          const ids = new Set(JSON.parse(fs.readFileSync("new-game-ids.json", "utf8")));
+          const games = loadGames(fs.readFileSync("notifications.js", "utf8"));
+          const added = games.filter(game => ids.has(game.id));
           if (added.length === 0) {
-            console.log("No new games detected.");
-            process.exit(0);
+            throw new Error("Daftar game baru tidak ditemukan untuk notifikasi.");
           }
 
           const count = added.length;
           const title = `🎮 ${count} Game Baru Telah Ditambahkan!`;
-
-          const gameTitles = added
-            .map(game => `• ${game.title}`)
-            .join("\n");
-
+          const gameTitles = added.map(game => `• ${game.title}`).join("\n");
           const body =
             `Ada ${count} game baru yang sudah tersedia di NekoVault! 🎉\n\n` +
-            `${gameTitles}\n\n` +
-            `Selamat bermain! 🎉`;
+            `${gameTitles}\n\nSelamat bermain! 🎉`;
 
           async function sendNotification() {
+            if (!process.env.SUPABASE_URL || !process.env.PUSH_ADMIN_TOKEN) {
+              throw new Error("SUPABASE_URL atau PUSH_ADMIN_TOKEN belum tersedia di GitHub Secrets.");
+            }
             const response = await fetch(
               `${process.env.SUPABASE_URL}/functions/v1/send-game-notification`,
               {
@@ -97,15 +177,10 @@ jobs:
                 })
               }
             );
-
             const result = await response.text();
-
             console.log("Supabase response:", result);
-
             if (!response.ok) {
-              throw new Error(
-                `Notification failed: HTTP ${response.status}`
-              );
+              throw new Error(`Notification failed: HTTP ${response.status}`);
             }
           }
 

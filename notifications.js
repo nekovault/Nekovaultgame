@@ -2,21 +2,38 @@
  * DATABASE NOTIFIKASI GAME BARU NEKOVAULT
  *
  * Cara pakai:
- * 1. Setiap kali akan menerbitkan game baru, tambahkan satu objek untuk setiap game.
- * 2. Untuk game yang dipublikasikan pada hari dan jam yang sama, gunakan publishedAt
- *    yang SAMA persis pada semua objek dalam kelompok tersebut.
- * 3. Gunakan format tanggal ISO: YYYY-MM-DDTHH:mm:ss+07:00 untuk waktu WIB.
- *    Contoh: 2026-10-30T16:00:00+07:00
- * 4. folder harus sama dengan folder game yang ada di gameList, tanpa "game.js"
- *    dan tanpa garis miring di awal/akhir. Contoh: "renpy/etherealthreads/"
- * 5. title adalah judul yang akan ditampilkan di panel notifikasi.
+ * 1. Setiap kali menerbitkan game baru, tambahkan satu objek.
+ * 2. Cukup isi id, title, dan folder.
+ * 3. Jangan isi publishedAt untuk game baru. GitHub Actions akan mengisinya
+ *    otomatis berdasarkan waktu commit publikasi, dikonversi ke WITA (+08:00),
+ *    lalu menyimpan hasilnya ke file ini.
+ * 4. folder harus sama dengan folder game yang ada di gameList.
+ * 5. Game lama dan publishedAt yang sudah tersimpan jangan diubah.
  *
- * Game lama tidak perlu dimasukkan. Hanya tambahkan game yang baru dipublikasikan.
- * Jangan ubah tanggal game lama saat melakukan deploy minggu berikutnya.
+ * Contoh game baru:
+ * {
+ *     id: "update-2026-11-05-nama-game",
+ *     title: "Nama Game",
+ *     folder: "renpy/nama-game/"
+ * }
  */
-    
 
 window.NEKO_NOTIFICATIONS = [
+    {
+    id: "update-2026-11-05-echoes-the-lies-we-tell-ourselves",
+    title: "Echoes: The Lies We Tell Ourselves",
+    folder: "renpy/echoes/"
+},
+{
+    id: "update-2026-11-05-fate-wont-separate-us",
+    title: "Fate Won't Separate Us",
+    folder: "renpy/fatwonseparate/"
+},
+{
+    id: "update-2026-11-05-shadows-of-absence",
+    title: "Shadows Of Absence",
+    folder: "renpy/shadowofabsence/"
+},
     {
         id: "update-2026-11-02-double-perception",
         title: "Double Perception",
