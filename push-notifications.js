@@ -69,7 +69,7 @@
     wrapper.setAttribute("aria-label", "Pengaturan Push Notification");
     wrapper.innerHTML = `
       <p class="nv-push-title">Notifikasi di perangkat</p>
-      <p class="nv-push-description">Aktifkan agar kabar game baru tetap masuk meskipun NekoVault tidak sedang dibuka. Pengaturan berlaku untuk browser/perangkat ini.</p>
+      <p class="nv-push-description">Aktifkan Lonceng🔔 Notifikasi biar dapet info update game, meski web sedang tertutup</p>
       <div class="nv-push-row">
         <span class="nv-push-status" id="nvPushStatus" role="status" aria-live="polite">Memeriksa dukungan browser…</span>
         <button class="nv-push-button" id="nvPushToggle" type="button" disabled>Memeriksa</button>
