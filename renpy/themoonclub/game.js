@@ -8,16 +8,16 @@ window.game = {
 
     developer: "Project mNm",
 
-    version: "0.4.2",
+    version: "0.5",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "03-10-2026",
+    released: "06-11-2026",
 
-    updated: "04-10-2026",
+    updated: "06-11-2026",
 
     languages: [
          "Korea",
@@ -27,7 +27,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/themoonclub",
 
@@ -41,7 +41,7 @@ window.game = {
 
     windows: true,
     
-    size: "2 GB",
+    size: "3 GB",
 
     linux: false,
 
@@ -77,7 +77,7 @@ window.game = {
     free: true,
 
     paidLink: "https://move2link.co/fda33a9",
-    freeLink: "https://move2link.co/f120b62"
+    freeLink: "https://move2link.co/921b1b4"
 },
 
 };

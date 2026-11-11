@@ -20,20 +20,50 @@
 
 window.NEKO_NOTIFICATIONS = [
     {
-    id: "update-2026-11-05-echoes-the-lies-we-tell-ourselves",
-    title: "Echoes: The Lies We Tell Ourselves",
-    folder: "renpy/echoes/"
-},
-{
-    id: "update-2026-11-05-fate-wont-separate-us",
-    title: "Fate Won't Separate Us",
-    folder: "renpy/fatwonseparate/"
-},
-{
-    id: "update-2026-11-05-shadows-of-absence",
-    title: "Shadows Of Absence",
-    folder: "renpy/shadowofabsence/"
-},
+        id: "update-2026-11-11-good-luke",
+        title: "Good Luke +18 The Game",
+        folder: "renpy/goodluke/"
+    },
+    {
+        id: "update-2026-11-11-a-simple",
+        title: "A Simple Life With My Unobtrusive Sister",
+        folder: "renpy/asimple/"
+    },
+    {
+        id: "update-2026-11-11-realm-invader",
+        title: "Realm Invader",
+        folder: "renpy/realminvader/"
+    },
+    {
+        id: "update-2026-11-11-how-to-raise",
+        title: "How To Raise Happy Harem",
+        folder: "renpy/happyharem/"
+    },
+    {
+        id: "update-2026-11-11-fates-collide",
+        title: "Fates Collide",
+        folder: "renpy/fatescollide/"
+    },
+    {
+        id: "update-2026-11-11-the-moon-club",
+        title: "The Moon Club",
+        folder: "renpy/themoonclub/"
+    },
+        {
+        id: "update-2026-11-05-echoes-the-lies-we-tell-ourselves",
+        title: "Echoes: The Lies We Tell Ourselves",
+        folder: "renpy/echoes/"
+    },
+    {
+        id: "update-2026-11-05-fate-wont-separate-us",
+        title: "Fate Won't Separate Us",
+        folder: "renpy/fatwonseparate/"
+    },
+    {
+        id: "update-2026-11-05-shadows-of-absence",
+        title: "Shadows Of Absence",
+        folder: "renpy/shadowofabsence/"
+    },
     {
         id: "update-2026-11-02-double-perception",
         title: "Double Perception",

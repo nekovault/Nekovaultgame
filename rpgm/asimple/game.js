@@ -8,16 +8,16 @@ window.game = {
 
     developer: "Countercurren Tea Party",
 
-    version: "1.3",
+    version: "1.4",
 
     engine: "RPG Maker",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "01-08-2026",
+    released: "02-11-2026",
 
-    updated: "01-08-2026",
+    updated: "09-11-2026",
 
     languages: [
          "English",
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
     
-    size: "2.5 GB / 1.9 GB",
+    size: "1.5 GB / 1.4 GB",
 
     linux: false,
 
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "",
-    freeLink: "https://exe.io/9qN7Z"
+    freeLink: "https://move2link.co/b9619da"
 },
 
 };
