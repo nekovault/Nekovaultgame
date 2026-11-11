@@ -28,7 +28,7 @@ window.NEKO_NOTIFICATIONS = [
     {
         "id": "update-2026-11-11-a-simple",
         "title": "A Simple Life With My Unobtrusive Sister",
-        "folder": "renpy/asimple/",
+        "folder": "rpgm/asimple/",
         "publishedAt": "2026-11-11T16:24:01.000+08:00"
     },
     {
