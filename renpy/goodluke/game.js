@@ -4,7 +4,7 @@ window.game = {
     // INFORMASI DASAR
     // =========================
 
-    title: "Good Luke",
+    title: "Good Luke +18 The Game",
 
     developer: "Good Luke",
 
