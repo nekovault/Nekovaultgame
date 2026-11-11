@@ -49,20 +49,23 @@ window.NEKO_NOTIFICATIONS = [
         title: "The Moon Club",
         folder: "renpy/themoonclub/"
     },
-        {
+    {
         id: "update-2026-11-05-echoes-the-lies-we-tell-ourselves",
         title: "Echoes: The Lies We Tell Ourselves",
-        folder: "renpy/echoes/"
+        folder: "renpy/echoes/",
+        publishedAt: "2026-11-05T14:16:30.000+08:00"
     },
     {
         id: "update-2026-11-05-fate-wont-separate-us",
         title: "Fate Won't Separate Us",
-        folder: "renpy/fatwonseparate/"
+        folder: "renpy/fatwonseparate/",
+        publishedAt: "2026-11-05T14:16:30.000+08:00"
     },
     {
         id: "update-2026-11-05-shadows-of-absence",
         title: "Shadows Of Absence",
-        folder: "renpy/shadowofabsence/"
+        folder: "renpy/shadowofabsence/",
+        publishedAt: "2026-11-05T14:16:30.000+08:00"
     },
     {
         id: "update-2026-11-02-double-perception",
