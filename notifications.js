@@ -19,17 +19,23 @@
  */
 
 window.NEKO_NOTIFICATIONS = [
-    {   "id": "update-2026-11-16-my-happy-life",
-        "title" : "My Happy Life",
-        "folder" : "rpgm/myhappylife",
+    {
+        "id": "update-2026-11-16-my-happy-life",
+        "title": "My Happy Life",
+        "folder": "rpgm/myhappylife",
+        "publishedAt": "2026-11-16T15:07:17.000+08:00"
     },
-    {   "id": "update-2026-11-16-dropout-saga",
-        "title" : "DropOut Saga",
-        "folder" : "renpy/dropoutsaga",
+    {
+        "id": "update-2026-11-16-dropout-saga",
+        "title": "DropOut Saga",
+        "folder": "renpy/dropoutsaga",
+        "publishedAt": "2026-11-16T15:07:17.000+08:00"
     },
-    {   "id": "update-2026-11-16-Absolute-dominantion",
-        "title" : "Absolute Domination",
-        "folder" : "renpy/absolutedomination",
+    {
+        "id": "update-2026-11-16-Absolute-dominantion",
+        "title": "Absolute Domination",
+        "folder": "renpy/absolutedomination",
+        "publishedAt": "2026-11-16T15:07:17.000+08:00"
     },
     {
         "id": "update-2026-11-11-good-luke",
