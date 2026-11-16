@@ -13,7 +13,7 @@ window.game = {
     engine: "RPG Maker",
     
     status: "Ongoing",
-    badge: "Update",
+    badge: "",
 
     released: "23-10-2026",
 
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: true,
+    featured: false,
     
     folder: "rpgm/zombiereatret2",
 

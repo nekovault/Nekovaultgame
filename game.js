@@ -3,6 +3,9 @@
 // =========================
 
 const gameList = [
+    "rpgm/myhappylife/game.js",
+    "renpy/dropoutsaga/game.js",
+    "renpy/absolutedomination/game.js",
     "renpy/goodluke/game.js",
     "rpgm/asimple/game.js",
     "renpy/realminvader/game.js",
