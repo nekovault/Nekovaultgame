@@ -8,7 +8,7 @@ on:
       - notifications.js
 
 permissions:
-  contents: write
+  contents: read
 
 # Hindari dua proses publikasi berjalan bersamaan.
 concurrency:
@@ -25,11 +25,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Detect new games and save WITA publication time
+      - name: Detect new games
         id: prepare
         env:
           BEFORE_SHA: ${{ github.event.before }}
-          CURRENT_SHA: ${{ github.sha }}
         run: |
           node <<'NODE'
           const fs = require("fs");
@@ -59,9 +58,17 @@ jobs:
             process.exit(0);
           }
 
-          const oldSource = execFileSync(
-            "git", ["show", `${before}:notifications.js`], { encoding: "utf8" }
-          );
+          let oldSource;
+          try {
+            oldSource = execFileSync(
+              "git", ["show", `${before}:notifications.js`], { encoding: "utf8" }
+            );
+          } catch (error) {
+            console.log("notifications.js belum tersedia pada commit sebelumnya.");
+            setOutput("has_new_games", "false");
+            process.exit(0);
+          }
+
           const source = fs.readFileSync("notifications.js", "utf8");
           const oldGames = loadGames(oldSource);
           const newGames = loadGames(source);
@@ -74,59 +81,15 @@ jobs:
             process.exit(0);
           }
 
-          // Gunakan waktu commit publikasi, lalu konversi UTC ke WITA (+08:00).
-          const commitTime = execFileSync(
-            "git", ["show", "-s", "--format=%cI", process.env.CURRENT_SHA],
-            { encoding: "utf8" }
-          ).trim();
-          const parsedTime = new Date(commitTime);
-          if (Number.isNaN(parsedTime.getTime())) {
-            throw new Error(`Waktu commit tidak valid: ${commitTime}`);
-          }
-          const witaTime = new Date(parsedTime.getTime() + 8 * 60 * 60 * 1000)
-            .toISOString()
-            .replace("Z", "+08:00");
-
-          const addedIds = new Set(added.map(game => game.id));
-          for (const game of newGames) {
-            if (addedIds.has(game.id)) {
-              // Timestamp otomatis menggantikan waktu manual pada game yang baru ditambahkan.
-              game.publishedAt = witaTime;
-            }
-          }
-
-          const assignment = /window\.NEKO_NOTIFICATIONS\s*=\s*\[[\s\S]*?\]\s*;/;
-          if (!assignment.test(source)) {
-            throw new Error("Deklarasi window.NEKO_NOTIFICATIONS tidak ditemukan.");
-          }
-
-          const updatedSource = source.replace(
-            assignment,
-            `window.NEKO_NOTIFICATIONS = ${JSON.stringify(newGames, null, 4)};`
+          fs.writeFileSync(
+            "new-game-ids.json",
+            JSON.stringify(added.map(game => game.id)),
+            "utf8"
           );
-          fs.writeFileSync("notifications.js", updatedSource, "utf8");
-
-          fs.writeFileSync("new-game-ids.json", JSON.stringify([...addedIds]), "utf8");
           setOutput("has_new_games", "true");
           console.log(`${added.length} game baru ditemukan.`);
-          console.log(`Timestamp WITA: ${witaTime}`);
           console.log(added.map(game => `- ${game.title}`).join("\n"));
           NODE
-
-      - name: Commit automatic publication timestamps
-        if: steps.prepare.outputs.has_new_games == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add notifications.js
-          if git diff --cached --quiet; then
-            echo "Tidak ada perubahan timestamp untuk disimpan."
-            exit 0
-          fi
-          git commit -m "chore: save automatic game publication timestamps"
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
 
       - name: Send push notification
         if: steps.prepare.outputs.has_new_games == 'true'
