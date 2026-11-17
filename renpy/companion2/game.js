@@ -8,16 +8,16 @@ window.game = {
 
     developer: "Berkili4",
 
-    version: "S2-Ch12.5",
+    version: "S2 - Ch13",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "26-05-2026",
+    released: "13-11-2026",
 
-    updated: "07-08-2026",
+    updated: "14-11-2026",
 
     languages: [
          "English",
@@ -26,9 +26,9 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
-    folder: "renpy/companion",
+    folder: "renpy/companion2",
 
     // =========================
     // PLATFORM
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
     
-    size: "1.2 GB / 4.6 GB",
+    size: "1.3 GB / 5.2 GB",
 
     linux: false,
 
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "https://move2link.co/0507709",
-    freeLink: "https://move2link.co/13c69bd"
+    freeLink: "https://move2link.co/909eb93"
 },
 
 };

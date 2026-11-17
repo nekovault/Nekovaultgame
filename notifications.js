@@ -19,6 +19,18 @@
  */
 
 window.NEKO_NOTIFICATIONS = [
+    {   "id": "update-2026-11-17-companion-of-darkness",
+        "title" : "Companion Of Darkness V.S2-Ch13",
+        "folder" : "renpy/companion2",
+    },
+    {   "id": "update-2026-11-17-desert-stalker",
+        "title" : "Desert Stalker V.22 Beta",
+        "folder" : "renpy/desertstalker",
+    },
+    {   "id": "update-2026-11-17-isekai-chan",
+        "title" : "Isekai Chan V.0.3.5",
+        "folder" : "renpy/isekaichan",
+    },
     {   "id": "update-2026-11-16-my-happy-life",
         "title" : "My Happy Life",
         "folder" : "rpgm/myhappylife",
