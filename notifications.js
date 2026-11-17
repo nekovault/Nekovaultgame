@@ -4,44 +4,49 @@
  * Cara pakai:
  * 1. Setiap kali menerbitkan game baru, tambahkan satu objek.
  * 2. Cukup isi id, title, dan folder.
- * 3. Jangan isi publishedAt untuk game baru. GitHub Actions akan mengisinya
- *    otomatis berdasarkan waktu commit publikasi, dikonversi ke WITA (+08:00),
- *    lalu menyimpan hasilnya ke file ini.
+ * 3. Jangan tambahkan publishedAt untuk game baru. Workflow hanya mendeteksi
+ *    ID baru dan mengirim push notification; workflow tidak mengubah file ini.
  * 4. folder harus sama dengan folder game yang ada di gameList.
- * 5. Game lama dan publishedAt yang sudah tersimpan jangan diubah.
+ * 5. publishedAt pada game lama dipertahankan sebagai data historis.
  *
  * Contoh game baru:
  * {
- *     id: "update-2026-11-05-nama-game",
+ *     id: "update-2026-11-17-nama-game",
  *     title: "Nama Game",
  *     folder: "renpy/nama-game/"
  * }
  */
 
 window.NEKO_NOTIFICATIONS = [
-    {   "id": "update-2026-11-17-companion-of-darkness",
-        "title" : "Companion Of Darkness V.S2-Ch13",
-        "folder" : "renpy/companion2",
+    {
+        "id": "update-2026-11-17-companion-of-darkness",
+        "title": "Companion Of Darkness V.S2-Ch13",
+        "folder": "renpy/companion2"
     },
-    {   "id": "update-2026-11-17-desert-stalker",
-        "title" : "Desert Stalker V.22 Beta",
-        "folder" : "renpy/desertstalker",
+    {
+        "id": "update-2026-11-17-desert-stalker",
+        "title": "Desert Stalker V.22 Beta",
+        "folder": "renpy/desertstalker"
     },
-    {   "id": "update-2026-11-17-isekai-chan",
-        "title" : "Isekai Chan V.0.3.5",
-        "folder" : "renpy/isekaichan",
+    {
+        "id": "update-2026-11-17-isekai-chan",
+        "title": "Isekai Chan V.0.3.5",
+        "folder": "renpy/isekaichan"
     },
-    {   "id": "update-2026-11-16-my-happy-life",
-        "title" : "My Happy Life",
-        "folder" : "rpgm/myhappylife",
+    {
+        "id": "update-2026-11-16-my-happy-life",
+        "title": "My Happy Life",
+        "folder": "rpgm/myhappylife"
     },
-    {   "id": "update-2026-11-16-dropout-saga",
-        "title" : "DropOut Saga",
-        "folder" : "renpy/dropoutsaga",
+    {
+        "id": "update-2026-11-16-dropout-saga",
+        "title": "DropOut Saga",
+        "folder": "renpy/dropoutsaga"
     },
-    {   "id": "update-2026-11-16-Absolute-dominantion",
-        "title" : "Absolute Domination",
-        "folder" : "renpy/absolutedomination",
+    {
+        "id": "update-2026-11-16-Absolute-dominantion",
+        "title": "Absolute Domination",
+        "folder": "renpy/absolutedomination"
     },
     {
         "id": "update-2026-11-11-good-luke",
