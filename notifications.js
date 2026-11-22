@@ -19,6 +19,11 @@
 
 window.NEKO_NOTIFICATIONS = [
     {
+        "id": "update-2026-11-22-finding-mia",
+        "title": "Finding Mia",
+        "folder": "renpy/findingmia"
+    },
+    {
         "id": "update-2026-11-22-my-bully-is-my-lover",
         "title": "My Bully Is My Lover",
         "folder": "renpy/mbml"

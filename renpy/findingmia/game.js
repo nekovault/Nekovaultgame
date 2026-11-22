@@ -8,16 +8,16 @@ window.game = {
 
     developer: "Untitled-Goons",
 
-    version: "0.2",
+    version: "0.3",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "16-08-2026",
+    released: "30-10-2026",
 
-    updated: "16-08-2026",
+    updated: "14-11-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/findingmia",
 
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "https://move2link.co/ce1794f",
-    freeLink: "https://sfl.gl/jZfRzjI7"
+    freeLink: "https://move2link.co/33cc6c0"
 },
 
 };
