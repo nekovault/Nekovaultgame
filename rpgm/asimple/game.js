@@ -13,7 +13,7 @@ window.game = {
     engine: "RPG Maker",
     
     status: "Ongoing",
-    badge: "Update",
+    badge: "",
 
     released: "02-11-2026",
 

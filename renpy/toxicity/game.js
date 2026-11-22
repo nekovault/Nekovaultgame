@@ -8,16 +8,16 @@ window.game = {
 
     developer: "ILSProductions",
 
-    version: "0.21",
+    version: "0.24",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "16-08-2026",
+    released: "16-11-2026",
 
-    updated: "19-08-2026",
+    updated: "18-11-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/toxicity",
 
@@ -76,7 +76,7 @@ window.game = {
     free: true,
 
     paidLink: "https://move2link.co/db565c1",
-    freeLink: "https://move2link.co/703ff43"
+    freeLink: "https://move2link.co/8e92aa4"
 },
 
 };

@@ -8,16 +8,16 @@ window.game = {
 
     developer: "Andolt",
 
-    version: "0.2",
+    version: "0.4",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "18-07-2026",
+    released: "03-11-2026",
 
-    updated: "04-08-2026",
+    updated: "18-11-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/lifegate",
 
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
     
-    size: "900 MB",
+    size: "2.17 GB",
 
     linux: false,
 
@@ -72,11 +72,11 @@ window.game = {
 
     
     download: {
-    paid: false,
+    paid: true,
     free: true,
 
-    paidLink: "",
-    freeLink: "https://move2link.co/4ddc811"
+    paidLink: "https://move2link.co/4ddc811",
+    freeLink: "https://move2link.co/5a28fc2"
 },
 
 };

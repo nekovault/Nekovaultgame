@@ -19,6 +19,36 @@
 
 window.NEKO_NOTIFICATIONS = [
     {
+        "id": "update-2026-11-22-my-bully-is-my-lover",
+        "title": "My Bully Is My Lover",
+        "folder": "renpy/mbml"
+    },
+    {
+        "id": "update-2026-11-22-f60-colliction",
+        "title": "F60 COLLICTION",
+        "folder": "renpy/f60collection"
+    },
+    {
+        "id": "update-2026-11-22-oppai-odessey",
+        "title": "Oppai Odessey",
+        "folder": "renpy/oppaiodessey"
+    },
+    {
+        "id": "update-2026-11-22-fates-collide",
+        "title": "Fates Collide Tersedia Versi Android",
+        "folder": "renpy/fatescollide"
+    },
+    {
+        "id": "update-2026-11-22-life-gate",
+        "title": "Life's Gate",
+        "folder": "renpy/lifegate"
+    },
+    {
+        "id": "update-2026-11-22-toxicity",
+        "title": "Toxicity",
+        "folder": "renpy/toxicity"
+    },
+    {
         "id": "update-2026-11-17-companion-of-darkness",
         "title": "Companion Of Darkness V.S2-Ch13",
         "folder": "renpy/companion2"

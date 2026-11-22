@@ -3,6 +3,12 @@
 // =========================
 
 const gameList = [
+    "renpy/mbml/game.js",
+    "renpy/f60collection/game.js",
+    "renpy/oppaiodyssey/game.js",
+    "renpy/fatescollide/game.js",
+    "renpy/lifegate/game.js",
+    "renpy/toxicity/game.js", 
     "renpy/companion2/game.js",
     "renpy/desertstalker/game.js",
     "renpy/isekaichan/game.js",
@@ -13,7 +19,6 @@ const gameList = [
     "rpgm/asimple/game.js",
     "renpy/realminvader/game.js",
     "renpy/happyharem/game.js",
-    "renpy/fatescollide/game.js",
     "renpy/themoonclub/game.js",
     "renpy/echoes/game.js",
     "renpy/fatwonseparate/game.js",
@@ -75,7 +80,6 @@ const gameList = [
     "renpy/thechronos/game.js",
     "renpy/hardtolove/game.js",
     "renpy/summertime/game.js",
-    "renpy/toxicity/game.js", 
     "renpy/milfycity/game.js",
     "renpy/findingmia/game.js",
     "unity/yakuzarogue/game.js",
@@ -85,7 +89,6 @@ const gameList = [
     "renpy/bbanother/game.js",    
     "renpy/abyssallust/game.js",
     "renpy/mayflay/game.js",  
-    "renpy/lifegate/game.js",    
     "renpy/re-even/game.js",
     "renpy/echoesoff2990/game.js",
     "renpy/cristalys/game.js",
