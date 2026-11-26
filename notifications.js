@@ -58,7 +58,7 @@ window.NEKO_NOTIFICATIONS = [
     {
         "id": "update-2026-11-22-oppai-odessey",
         "title": "Oppai Odessey",
-        "folder": "renpy/oppaiodessey",
+        "folder": "renpy/oppaiodyssey",
         "publishedAt": "2026-11-22T12:00:00+08:00"
     },
     {
