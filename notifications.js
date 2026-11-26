@@ -4,8 +4,9 @@
  * Cara pakai:
  * 1. Setiap kali menerbitkan game baru, tambahkan satu objek.
  * 2. Cukup isi id, title, dan folder.
- * 3. Jangan tambahkan publishedAt untuk game baru. Workflow hanya mendeteksi
- *    ID baru dan mengirim push notification; workflow tidak mengubah file ini.
+ * 3. Jangan isi publishedAt untuk game baru. GitHub Actions akan mengisinya
+ *    otomatis berdasarkan waktu commit/publikasi dalam zona WITA (+08:00),
+ *    lalu menyimpan perubahan ke file ini.
  * 4. folder harus sama dengan folder game yang ada di gameList.
  * 5. publishedAt pada game lama dipertahankan sebagai data historis.
  *
@@ -21,82 +22,98 @@ window.NEKO_NOTIFICATIONS = [
     {
         "id": "update-2026-11-26-shattered-mind",
         "title": "Shattered Mind V.30 Beta",
-        "folder": "renpy/shatteredminds"
+        "folder": "renpy/shatteredminds",
+        "publishedAt": "2026-11-26T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-26-re-even",
         "title": "RE Even v.0.3.3",
-        "folder": "renpy/re-even"
+        "folder": "renpy/re-even",
+        "publishedAt": "2026-11-26T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-26-k-tycon",
         "title": "K-Tycoon v.0.2 Beta",
-        "folder": "renpy/k-tycon"
+        "folder": "renpy/k-tycon",
+        "publishedAt": "2026-11-26T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-22-finding-mia",
         "title": "Finding Mia",
-        "folder": "renpy/findingmia"
+        "folder": "renpy/findingmia",
+        "publishedAt": "2026-11-22T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-22-my-bully-is-my-lover",
         "title": "My Bully Is My Lover",
-        "folder": "renpy/mbml"
+        "folder": "renpy/mbml",
+        "publishedAt": "2026-11-22T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-22-f60-colliction",
         "title": "F60 COLLICTION",
-        "folder": "renpy/f60collection"
+        "folder": "renpy/f60collection",
+        "publishedAt": "2026-11-22T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-22-oppai-odessey",
         "title": "Oppai Odessey",
-        "folder": "renpy/oppaiodessey"
+        "folder": "renpy/oppaiodessey",
+        "publishedAt": "2026-11-22T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-22-fates-collide",
         "title": "Fates Collide Tersedia Versi Android",
-        "folder": "renpy/fatescollide"
+        "folder": "renpy/fatescollide",
+        "publishedAt": "2026-11-22T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-22-life-gate",
         "title": "Life's Gate",
-        "folder": "renpy/lifegate"
+        "folder": "renpy/lifegate",
+        "publishedAt": "2026-11-22T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-22-toxicity",
         "title": "Toxicity",
-        "folder": "renpy/toxicity"
+        "folder": "renpy/toxicity",
+        "publishedAt": "2026-11-22T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-17-companion-of-darkness",
         "title": "Companion Of Darkness V.S2-Ch13",
-        "folder": "renpy/companion2"
+        "folder": "renpy/companion2",
+        "publishedAt": "2026-11-17T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-17-desert-stalker",
         "title": "Desert Stalker V.22 Beta",
-        "folder": "renpy/desertstalker"
+        "folder": "renpy/desertstalker",
+        "publishedAt": "2026-11-17T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-17-isekai-chan",
         "title": "Isekai Chan V.0.3.5",
-        "folder": "renpy/isekaichan"
+        "folder": "renpy/isekaichan",
+        "publishedAt": "2026-11-17T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-16-my-happy-life",
         "title": "My Happy Life",
-        "folder": "rpgm/myhappylife"
+        "folder": "rpgm/myhappylife",
+        "publishedAt": "2026-11-16T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-16-dropout-saga",
         "title": "DropOut Saga",
-        "folder": "renpy/dropoutsaga"
+        "folder": "renpy/dropoutsaga",
+        "publishedAt": "2026-11-16T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-16-Absolute-dominantion",
         "title": "Absolute Domination",
-        "folder": "renpy/absolutedomination"
+        "folder": "renpy/absolutedomination",
+        "publishedAt": "2026-11-16T12:00:00+08:00"
     },
     {
         "id": "update-2026-11-11-good-luke",
