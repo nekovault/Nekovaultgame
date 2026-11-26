@@ -13,7 +13,7 @@ window.game = {
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "New",
+    badge: "",
 
     released: "12-11-2026",
 
@@ -27,7 +27,7 @@ window.game = {
     
     showCredit: false,
 
-    featured: true,
+    featured: false,
     
     folder: "renpy/isekaichan",
 

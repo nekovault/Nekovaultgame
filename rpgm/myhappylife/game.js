@@ -13,7 +13,7 @@ window.game = {
     engine: "RPG Maker",
     
     status: "Ongoing",
-    badge: "New",
+    badge: "",
 
     released: "12-09-2026",
 
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: true,
+    featured: false,
     
     folder: "rpgm/myhappylife",
 

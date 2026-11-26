@@ -3,6 +3,9 @@
 // =========================
 
 const gameList = [
+    "renpy/shatteredminds/game.js",
+    "renpy/re-even/game.js",
+    "renpy/k-tycon/game.js",
     "renpy/findingmia/game.js",
     "renpy/mbml/game.js",
     "renpy/f60collection/game.js",
@@ -51,7 +54,6 @@ const gameList = [
     "renpy/cheekygostgirl/game.js",
     "renpy/thestorm/game.js",
     "renpy/glichedhunter/game.js",
-    "renpy/shatteredminds/game.js",
     "renpy/companion/game.js",
     "renpy/mos/game.js",
     "rpgm/runawai/game.js",
@@ -89,7 +91,6 @@ const gameList = [
     "renpy/bbanother/game.js",    
     "renpy/abyssallust/game.js",
     "renpy/mayflay/game.js",  
-    "renpy/re-even/game.js",
     "renpy/echoesoff2990/game.js",
     "renpy/cristalys/game.js",
     "renpy/boundbylust/game.js",

@@ -19,6 +19,21 @@
 
 window.NEKO_NOTIFICATIONS = [
     {
+        "id": "update-2026-11-26-shattered-mind",
+        "title": "Shattered Mind V.30 Beta",
+        "folder": "renpy/shatteredminds"
+    },
+    {
+        "id": "update-2026-11-26-re-even",
+        "title": "RE Even v.0.3.3",
+        "folder": "renpy/re-even"
+    },
+    {
+        "id": "update-2026-11-26-k-tycon",
+        "title": "K-Tycoon v.0.2 Beta",
+        "folder": "renpy/k-tycon"
+    },
+    {
         "id": "update-2026-11-22-finding-mia",
         "title": "Finding Mia",
         "folder": "renpy/findingmia"

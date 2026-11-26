@@ -8,16 +8,16 @@ window.game = {
 
     developer: "ReEven Studio",
 
-    version: "0.3.1",
+    version: "0.3.3",
 
     engine: "Ren'Py",
     
     status: "Ongoing",
-    badge: "",
+    badge: "Update",
 
-    released: "07-08-2026",
+    released: "02-11-2026",
 
-    updated: "14-08-2026",
+    updated: "19-11-2026",
 
     languages: [
          "English",
@@ -26,7 +26,7 @@ window.game = {
     
     showCredit: true,
 
-    featured: false,
+    featured: true,
     
     folder: "renpy/re-even",
 
@@ -40,7 +40,7 @@ window.game = {
 
     windows: true,
     
-    size: "500 MB / 1.6 GB",
+    size: "2.2 GB",
 
     linux: false,
 
@@ -72,11 +72,11 @@ window.game = {
 
     
     download: {
-    paid: false,
+    paid: true,
     free: true,
 
-    paidLink: "",
-    freeLink: "https://move2link.co/5a3374f"
+    paidLink: "https://move2link.co/07e3afd",
+    freeLink: "https://move2link.co/15b8ace"
 },
 
 };
